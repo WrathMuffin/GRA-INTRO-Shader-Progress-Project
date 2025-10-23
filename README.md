@@ -28,5 +28,17 @@ With Specular:
 Without Specular:
 <img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
 
-The specular effect is only used one in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this 
+The specular effect is only used one in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself, with using both the jagged and angular edges and surfaces with a sense of smoothness and organic shape in general compared to the most of the bosses in general.
 
+Flat shader:
+<img width="838" height="658" alt="image" src="https://github.com/user-attachments/assets/8cb9c42f-93b8-416b-9bcd-06e67d066484" />
+The flat shader changes the object's appearence to have a more low-poly render style from recalculating the normal vectors to give that appearence. The position node in world space was used for the DDX and the DDY nodes, and these two functions recalculate the normals on the horizontal and vertical axis. The DDX node recalculates the normals using the difference of a pixel being next to another pixel, and the DDY node uses the difference of a pixel being above another pixel. The position nodes were used in this way so that the individual faces of the model can be used in calculations with their normal directions. The product of the cross product function is then normalized and used in the dot product node with the main light direction vector which is normalized, so that the lighting calculations can be done with how the light will be calculated with the modified face normals. Finally, the Base color property is used to multiply the lighting effect with the color values to change how the flat shading looks in shading gradients and appearence which is then added to the Base Color node in the Fragment shader.
+
+With flat shading:
+<img width="1345" height="572" alt="image" src="https://github.com/user-attachments/assets/1042579d-342d-4aeb-b7c5-02920de0fcd3" />
+Without flat shading:
+<img width="1390" height="561" alt="image" src="https://github.com/user-attachments/assets/d6d55fa1-95f2-4dbb-8616-500b9a58f9c8" />
+
+This shader was also used only for the Capybarsa boss fight. This was done for both giving a more low-poly appearence for the boss' model to fit with the overall style of the game, and also control how shadows are displayed on the object. As with the flat shading there is more darker shadows to match with the environment to further emphasize the low-poly designs of our characters in the game to give more of a retro look. 
+
+Color
