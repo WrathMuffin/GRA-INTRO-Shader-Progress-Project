@@ -20,4 +20,13 @@ The reflection shader is used to further enhance the sci-fi environment, as the 
 
 Specular shader:
 <img width="952" height="732" alt="image" src="https://github.com/user-attachments/assets/5b46d615-efe9-4bcc-9592-d5954d6e7219" />
-The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node 
+The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node with the Shininess property so that now ithe lighting effect becomes a shiny dot that can be amplified or reduced in power, and the specular is multiplied with the Specular color property so that the color values are multiplied with the lighting effect to change the color of the specular. Finally that gets added to the Base Color node in the Fragment shader so that a specular dot can appear on the object.
+<img width="912" height="451" alt="image" src="https://github.com/user-attachments/assets/6b459d63-fe55-4a5b-a827-4aed710d0189" />
+
+With Specular:
+<img width="1276" height="463" alt="image" src="https://github.com/user-attachments/assets/d7334769-aae3-4fd3-935f-5457a3adb545" />
+Without Specular:
+<img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
+
+The specular effect is only used one in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this 
+
