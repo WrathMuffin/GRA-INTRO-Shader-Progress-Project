@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _APPLYDIFFUSE_YES
   - _APPLY_AMBIENT_YES
   - _APPLY_BUMP_NO
   - _APPLY_COLOR_CORRECTION_NO
@@ -66,6 +67,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _APPLYDIFFUSE: 0
     - _APPLY_AMBIENT: 0
     - _APPLY_BUMP: 1
     - _APPLY_COLOR_CORRECTION: 0
@@ -74,7 +76,7 @@ Material:
     - _APPLY_RIM: 0
     - _APPLY_SPECULAR: 1
     - _APPLY_TOON: 0
-    - _Brightness: 1.5
+    - _Brightness: 1
     - _Bump_amount: 1
     - _Contribution: 0
     - _QueueControl: 0
