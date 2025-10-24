@@ -50,11 +50,13 @@ Without color grading:
 
 as for ambient and diffused lighting, when we tried to apply it there is barely any noticable difference on the object itself, which led to us not using it for our game as there is barely a visible effect to enhance the models for our style. 
 
-With trying to apply ambient and diffused lighting:
+NOTE: The two images below uses another LUT!!!
+
+With trying to apply ambient and diffused lighting (NOTE: take a closer look kat the highlights on the top of the head, it is lighter in this picture):
 
 <img width="801" height="517" alt="image" src="https://github.com/user-attachments/assets/7d4fe7d1-bbf5-4a71-a027-f6deb1b1f632" />
 
-Without using ambient and diffused lighting:
+Without using ambient and diffused lighting (NOTE: the highlights on the head are dimmer in this picture):
 
 <img width="813" height="527" alt="image" src="https://github.com/user-attachments/assets/9e19885e-3e24-4864-a221-21af96b8d911" />
 
