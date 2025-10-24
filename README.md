@@ -1,4 +1,4 @@
-# ConflictSolver
+# Shaders used in ConflictSolver
 
 
 Diffuse Lighting:
