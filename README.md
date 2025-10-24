@@ -8,12 +8,12 @@ The rim lighting was accomplished by first, getting both the normal vectors of t
 
 <img width="440" height="587" alt="image" src="https://github.com/user-attachments/assets/39a061d4-daec-4615-b1a6-ce5b3720c0ad" />
 
-Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additional Rim glow properties, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to amplify the glow factor of the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
+Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additinoal newly added Rim glow property, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to allow us to adjust how much glow the objetc will glow for the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
 
 <img width="135" height="167" alt="image" src="https://github.com/user-attachments/assets/7a931cb9-c74c-4804-91a4-66a1d85404d6" />
 <img width="496" height="427" alt="image" src="https://github.com/user-attachments/assets/6388e6cf-6458-4fcf-8794-ad3225684804" />
 
-Rim lighting was used the majority of the time in this game, as most of it takes place in a technology and sci fi inspired world. So, to help convey that the player character and the environment props like the platform objects in our game use rim lighting to make things glow. For the player the inside of the coat and rim around the fedora glows blue, as the surfaces emit the rim glow effect due to how the lighting is calculated for more angular objects instead of spherical. As for the platforms parts of them glow green as the background of the game is literally falling dark green texts of code so having more green lighting will match with the environment in place. 
+Rim lighting was used the majority of the time in this game, as most of it takes place in a technology and sci fi inspired world. So, to help convey that the player character and the environment props like the platform objects in our game use rim lighting to make things glow. For the player the inside of the coat and rim around the fedora glows blue to convey a sense of "good" as opposed to the red "evil" for the enemies, as the surfaces emit the rim glow effect due to how the lighting is calculated for more angular objects instead of spherical. As for the platforms parts of them glow green as the background of the game is literally falling dark green texts of code so having more green lighting will match with the environment in place. 
 
 Reflection shader: 
 
@@ -24,13 +24,13 @@ The reflection shader uses a cubemap that is projected onto the object from the 
 
 <img width="1045" height="440" alt="image" src="https://github.com/user-attachments/assets/ad8b3e24-4e5f-4db6-b70d-2d6d26e7cd2c" />
 
-The reflection shader is used to further enhance the sci-fi environment, as the game literally takes place within the programming of the repository software Bithub (which is the main antagonist of the game). Along with making things glow, having parts of the environment reflect out images of code helps better convey the idea of being in the world of software and programming, and that same cube map is the same one used in the environment of the levels in displaying a more reflective material for the platforms which adds visual interest but also a sense of realism as lighting acts in a way we expect.
+The reflection shader is used to further enhance the sci-fi environment, as the game literally takes place within the programming of the repository software Bithub (which is the main antagonist of the game). Along with making things glow, having parts of the environment reflect out images of code helps better convey the idea of being in the world of software and programming, and that same cube map is the same one used in the environment of the levels in displaying a more reflective material for the platforms which adds visual interest but also a sense of realism as lighting acts in a way we expect. Additionaly, this will help convey the feeling of plastic and metal, fittingly with the theme of technology.
 
 Specular shader:
 
 <img width="952" height="732" alt="image" src="https://github.com/user-attachments/assets/5b46d615-efe9-4bcc-9592-d5954d6e7219" />
 
-The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node with the Shininess property so that now ithe lighting effect becomes a shiny dot that can be amplified or reduced in power, and the specular is multiplied with the Specular color property so that the color values are multiplied with the lighting effect to change the color of the specular. Finally that gets added to the Base Color node in the Fragment shader so that a specular dot can appear on the object.
+The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node with the Shininess property so that the lighting effect becomes a shiny dot that can be amplified or reduced in power, and the specular is multiplied with the Specular color property so that the color values are multiplied with the lighting effect to change the color of the specular. Finally that gets added to the Base Color node in the Fragment shader so that a specular dot can appear on the object.
 
 <img width="912" height="451" alt="image" src="https://github.com/user-attachments/assets/6b459d63-fe55-4a5b-a827-4aed710d0189" />
 
@@ -42,7 +42,7 @@ Without Specular:
 
 <img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
 
-The specular effect is only used one in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself, with using both the jagged and angular edges and surfaces with a sense of smoothness and organic shape in general compared to the most of the bosses in general.
+The specular effect is only used once in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game.
 
 Flat shader:
 
@@ -58,7 +58,7 @@ Without flat shading:
 
 <img width="1390" height="561" alt="image" src="https://github.com/user-attachments/assets/d6d55fa1-95f2-4dbb-8616-500b9a58f9c8" />
 
-This shader was also used only for the Capybarsa boss fight. This was done for both giving a more low-poly appearence for the boss' model to fit with the overall style of the game, and also control how shadows are displayed on the object. As with the flat shading there is more darker shadows to match with the environment to further emphasize the low-poly designs of our characters in the game to give more of a retro look. 
+This shader was used for all of the material used, that includes the props and the characters. This was done for both giving a more low-poly appearence for the model to fit with the overall style of the game, and also control how shadows are displayed on the object. As with the flat shading there is more darker shadows to match with the environment to further emphasize the low-poly designs of our models in the game to give more of a retro look. 
 
 Color Correction:
 
@@ -70,4 +70,24 @@ Color correction changes the color and the overall mood of a scene using a Look 
 
 (INSERT COLOR CORRECTION SCREENSHOTS HERE):
 
-Color correction was used in our project to differentiate the level environments in our game, so that every boss level and stage feels different in tone. The Red LUT table is made to be more menacing with the use of purely the color red as its more associated with danger, and that is used for the feeling of tension and dread for when the main character dies to make the death more impactful for the player, even if only briefly
+Color correction was used in our project to enhance the "feeling" for major events, essentially feels different in tone. 
+
+Nostalgic LUT:
+
+<img width="1024" height="32" alt="nostalgicLUT" src="https://github.com/user-attachments/assets/1be2318a-b12d-44c8-8b12-63114212d131" />
+
+The Nostalgic LUT is, well, nostalgic! It evokes the sense of nostalgia by giving the scene a light pastel theme, basically evoking a retro game look (inpired by GameBoy's theme). This LUT is used for the introduction of the game only, which starts out as a pixel 2D styled game, fittingly wit hthe GameBoy inspired themes. Additionally, the nostalgic LUT also gives us high contrast, which makes the objects in the scene more eye catching and sharp.
+
+The scene before nostalgic LUT:
+
+<img width="1369" height="762" alt="og" src="https://github.com/user-attachments/assets/68271716-5e38-42b6-ad2f-5c3f1f6a80a2" />
+
+After nostalgic LUT is applied:
+
+<img width="1368" height="764" alt="with nostalgicLUT" src="https://github.com/user-attachments/assets/3b164c0d-814b-427e-aa68-d29d7c2d8257" />
+
+Red ominous LUT:
+
+<img width="1024" height="32" alt="red" src="https://github.com/user-attachments/assets/88d9761b-490a-4f72-a480-b0fdb20a3a01" />
+
+The Red LUT is made to be more menacing with the use of purely the color red as its more associated with danger, and that is used for the feeling of tension and dread for when the main character dies to make the death more impactful for the player, even if only briefly.
