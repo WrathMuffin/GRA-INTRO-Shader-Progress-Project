@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Toon_ramp:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: eedb7b2aa06d68c488095075f911b4ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -74,7 +74,7 @@ Material:
     - _APPLY_RIM: 0
     - _APPLY_SPECULAR: 0
     - _APPLY_TOON: 0
-    - _Brightness: 5
+    - _Brightness: 1.5
     - _Bump_amount: 1
     - _Contribution: 0
     - _QueueControl: 0
