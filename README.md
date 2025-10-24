@@ -36,6 +36,7 @@ Specular on the bullet (faint blue light to match the protagonist's blue rim lig
 <img width="512" height="208" alt="eeee" src="https://github.com/user-attachments/assets/2c5e1f10-0635-4f54-808d-e4a68eaffa16" />
 
 Ambient + Diffuse + Color Correction (On objects):
+
 <img width="1462" height="690" alt="image" src="https://github.com/user-attachments/assets/508d48d2-e5dc-4620-a451-da5fa86360c5" />
 
 We did at one point attempt ot use ambient and diffused lighting to experient to see if it pairs well with color correction of objects in our game. We used a LUT to be sampled and have the dimensions of the texture be used to calculate the offsets on the x and y axis, along with using the 32-bit COLOR variable data so that a threshold is made for color mapping so that the color mapping does not go beyond the threshhold. Then for every color pixel a position on the LUT is calculated, and that is used in color grading with the LUT sampling over that pixel with the LUT coordinate position to be used in the final output. 
@@ -50,7 +51,7 @@ Without color grading:
 
 as for ambient and diffused lighting, when we tried to apply it there is barely any noticable difference on the object itself, which led to us not using it for our game as there is barely a visible effect to enhance the models for our style. 
 
-NOTE: The two images below uses another LUT!!!
+NOTE: The two images below uses another LUT, the solarize LUT!!!
 
 With trying to apply ambient and diffused lighting (NOTE: take a closer look kat the highlights on the top of the head, it is lighter in this picture):
 
@@ -106,7 +107,15 @@ The rim lighting was accomplished by first, getting both the normal vectors of t
 
 Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additinoal newly added Rim glow property, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to allow us to adjust how much glow the objetc will glow for the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
 
+ConflictSOlver.exe (the protagonist):
+
 <img width="491" height="581" alt="pic" src="https://github.com/user-attachments/assets/3238bd48-e1f2-46b0-9f07-aa70dc25668a" />
+
+AN enemy:
+
+<img width="734" height="545" alt="image" src="https://github.com/user-attachments/assets/458cb627-ad15-4ed0-9471-0d38a8777076" />
+
+Platforms:
 
 <img width="496" height="427" alt="image" src="https://github.com/user-attachments/assets/6388e6cf-6458-4fcf-8794-ad3225684804" />
 
