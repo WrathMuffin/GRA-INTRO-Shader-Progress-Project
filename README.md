@@ -49,4 +49,4 @@ Color correction changes the color and the overall mood of a scene using a Look 
 
 (INSERT COLOR CORRECTION SCREENSHOTS HERE):
 
-Color correction was used in our project to differentiate the level environments in our game, so that every boss level and stage feels different in tone. 
+Color correction was used in our project to differentiate the level environments in our game, so that every boss level and stage feels different in tone. The Red LUT table is made to be more menacing with the use of purely the color red as its more associated with danger, and that is used for the feeling of tension and dread for when the main character dies to make the death more impactful for the player, even if only briefly
