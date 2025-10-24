@@ -68,9 +68,17 @@ Color Correction:
 
 <img width="1375" height="552" alt="image" src="https://github.com/user-attachments/assets/e248bf5d-1100-4bac-8119-b670953a9c9e" />
 
-Color correction changes the color and the overall mood of a scene using a Look Up Table (LUT) as a 3D texture to map out the colors in scene and replace them in the final output as a post processing effect. This effect is complex, but the gist of it is that the LUT bar property has its texture file dimensions divided by 0.5 (this is the texel offsets). Then in the subtract node 32 is subtracted by 1, which is the stand in for the 32-bit COLORS variable and then divided by 32 (what would be the COLORS variable) so that data along with the offsets can be used to calculate the coordinates using the LUT to map out the colors within the threshhold from the LUT. Once the coordinates are calculated in the LUT table to map out the colors, the LUT is sampled for the color graded pixels and outputed in the Fragment shader.
+It changes the color and the overall mood of a scene using a Look Up Table (LUT) as a 3D texture to map out the colors in scene and replace them in the final output as a post processing effect. This effect is complex, but the gist of it is that the LUT bar property has its texture file dimensions divided by 0.5 (this is the texel offsets). Then in the subtract node 32 is subtracted by 1, which is the stand in for the 32-bit COLORS variable and then divided by 32 (what would be the COLORS variable) so that data along with the offsets can be used to calculate the coordinates using the LUT to map out the colors within the threshhold from the LUT. Once the coordinates are calculated in the LUT table to map out the colors, the LUT is sampled for the color graded pixels and outputed in the Fragment shader.
 
-Color correction was used in our project to enhance the "feeling" for major events, essentially feels different in tone. 
+The shader works by using the 2D LUT texture as a 3D cube (think of a Rubik's cube) for color correction. Each piexl is remapped using this LUT cube to change the hue and tone similar to a filter. The split node first separates the input texture into RGB and Alpha. To set up the LUT, the calculation needs to take into the account that the LUT is a flatted 3D cube with 32^3 dimension, so the size is the LUT's resolution. To get the correct UV map, we need to somehow convert rgb into uv: 
+
+- We need to split the LIT into slices by using the Blue channel, which will decides which row to sample from
+- For u, we need to use the Red channel since U axis corresponds across the Red channel and the LUT slices
+- For v, we'll use the Green channel, since it ran across the Green channel
+
+In the end we have u, and v for the LUT coordinates. Use it as the UV map for the sample texture 2D and it will outpout the remapped RGB values. For the lerp node, this essentially controls how much the color correction will affect the scene, with 1 being the max and the most affected, to 0 which is the original color of the scene.
+
+Color correction was used in our project to enhance major events, essentially evoking feelings using tones. 
 
 Nostalgic LUT:
 
