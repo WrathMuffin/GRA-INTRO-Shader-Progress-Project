@@ -41,4 +41,12 @@ Without flat shading:
 
 This shader was also used only for the Capybarsa boss fight. This was done for both giving a more low-poly appearence for the boss' model to fit with the overall style of the game, and also control how shadows are displayed on the object. As with the flat shading there is more darker shadows to match with the environment to further emphasize the low-poly designs of our characters in the game to give more of a retro look. 
 
-Color
+Color Correction:
+<img width="1076" height="772" alt="image" src="https://github.com/user-attachments/assets/23a3208b-b8c8-40c3-ade4-04a29c1105e8" />
+<img width="1375" height="552" alt="image" src="https://github.com/user-attachments/assets/e248bf5d-1100-4bac-8119-b670953a9c9e" />
+
+Color correction changes the color and the overall mood of a scene using a Look Up Table (LUT) as a 3D texture to map out the colors in scene and replace them in the final output as a post processing effect. This effect is complex, but the gist of it is that the LUT bar property has its texture file dimensions divided by 0.5 (this is the texel offsets). Then in the subtract node 32 is subtracted by 1, which is the stand in for the 32-bit COLORS variable and then divided by 32 (what would be the COLORS variable) so that data along with the offsets can be used to calculate the coordinates using the LUT to map out the colors within the threshhold from the LUT. Once the coordinates are calculated in the LUT table to map out the colors, the LUT is sampled for the color graded pixels and outputed in the Fragment shader.
+
+(INSERT COLOR CORRECTION SCREENSHOTS HERE):
+
+Color correction was used in our project to differentiate the level environments in our game, so that every boss level and stage feels different in tone. 
