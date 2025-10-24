@@ -110,6 +110,8 @@ After red ominous LUT is applied:
 
 Solarize LUT:
 
+<img width="1024" height="32" alt="SolarizeLUT" src="https://github.com/user-attachments/assets/d4cc72f8-08f4-42b7-bf5a-1732757fd3a6" />
+
 The solarizing LUT does what it says in the name; it creates a warped effect by reversing the tone of the image. In the game, this is used to give impact to certain actions. Namely, landing the hit on a boss will use this effect and slow down the game to enhance the impact of the final blow.
 
 The scene before solarize LUT:
