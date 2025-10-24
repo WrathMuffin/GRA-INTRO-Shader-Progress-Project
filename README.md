@@ -40,13 +40,13 @@ Ambient + Diffuse + Color Correction (On objects):
 
 We did at one point attempt ot use ambient and diffused lighting to experient to see if it pairs well with color correction of objects in our game. We used a LUT to be sampled and have the dimensions of the texture be used to calculate the offsets on the x and y axis, along with using the 32-bit COLOR variable data so that a threshold is made for color mapping so that the color mapping does not go beyond the threshhold. Then for every color pixel a position on the LUT is calculated, and that is used in color grading with the LUT sampling over that pixel with the LUT coordinate position to be used in the final output. 
 
-With color grading:
+With color grading (using red ominous LUT):
 
-<img width="1226" height="661" alt="image" src="https://github.com/user-attachments/assets/eee80393-f492-482c-af06-7de25fbbc9d8" />
+<img width="976" height="680" alt="yellolw body with cololr correction" src="https://github.com/user-attachments/assets/72871310-1b16-49ad-8dc3-fc67ca5a74db" />
 
 Without color grading:
 
-<img width="1227" height="671" alt="image" src="https://github.com/user-attachments/assets/4bbe0e94-2435-4d62-ad46-b69bcc9ab402" />
+<img width="973" height="675" alt="without collor correction" src="https://github.com/user-attachments/assets/30a27335-34c1-41e4-82c6-8dbc60564881" />
 
 as for ambient and diffused lighting, when we tried to apply it there is barely any noticable difference on the object itself, which led to us not using it for our game as there is barely a visible effect to enhance the models for our style. 
 
