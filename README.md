@@ -77,6 +77,7 @@ Without Toon Shader:
 The Toon Shader is used for every boss, and that is so to help give more of a retro and poly feel of the boss characters with how lighting is displayed on them instead of giving more smooth gradients for lighting and shading.
 
 Bump Shader:
+
 <img width="1152" height="523" alt="image" src="https://github.com/user-attachments/assets/c0d61e79-c626-4d51-96dc-2bca33bcf17d" />
 
 The bump shader makes the texture applied to the object have more depth to it without modifying the geometry of the mesh itself. This was done through recalculating the normals of the mesh. A normal map needs to be sampled and then unpacked first, and using the rbg values the X, Y, and Z coordinates of the normal vectors along with needing to convert Tangent, Bitangent, and the object normals into world space and multiply them together into a big 3 by 3 matrix to be used in the dot product for lighting calculations with the Main Light Direction (also being normalized). The dot product is multiplied by -1 to flip it around to correct it, and saturated and multiplied with the main object textured that is sampled so that the depth effect can be applied to it, and be added to the BaseColor node in the Fragment shader to use the effect. 
@@ -105,7 +106,7 @@ The rim lighting was accomplished by first, getting both the normal vectors of t
 
 Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additinoal newly added Rim glow property, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to allow us to adjust how much glow the objetc will glow for the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
 
-<img width="135" height="167" alt="image" src="https://github.com/user-attachments/assets/7a931cb9-c74c-4804-91a4-66a1d85404d6" />
+<img width="491" height="581" alt="pic" src="https://github.com/user-attachments/assets/3238bd48-e1f2-46b0-9f07-aa70dc25668a" />
 
 <img width="496" height="427" alt="image" src="https://github.com/user-attachments/assets/6388e6cf-6458-4fcf-8794-ad3225684804" />
 
