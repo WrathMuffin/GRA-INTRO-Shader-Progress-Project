@@ -9,6 +9,22 @@ Diffuse-Ambient:
 <img width="870" height="408" alt="image" src="https://github.com/user-attachments/assets/34fbe121-0c4c-4953-b666-b3590af10cb9" />
 Diffuse Ambient is very similar to diffuse lighting, in that the process is almost the same with needing the main light and normal vectors being normalized. Though the key difference is the shadow color itself, it is not pitch black this time around but instead the shaded areas are toned down in brightness, as this lighting tries to simulate the room ambient lighting and shadows of the environment. We also couldnt find a use for it in our game unfortuantly as it conflicts with our artistic vision for it.
 
+Toon Shader:
+<img width="918" height="533" alt="image" src="https://github.com/user-attachments/assets/40524b23-4c3c-453e-92d5-8ca89db1c18b" />
+The Toon shader renders 3D objects to have a more cartoony appearence by applying a toon ramp texture over the object with the uv involved to simulate cell shading. The normals and the main light direction are normalized and used in the dot product and multiplied by negative one to have the lighting be calculated and corrected, and then that is hooked to the saturate function and connected to the UV port of the Sample Texture 2D node. What this does is that it modifies the UV of the object to map out the toon ramp texture (that property is plugged into the Sample Texture 2D node) to give that cell shading look depending on where the main lighting is coming from. Then that gets added to the BaseColor node of the Fragment shader to be applied and work in game. 
+
+With Toon Shader (look more closely at the object, you can find the outline of the highlights of the toon ramp):
+<img width="897" height="550" alt="image" src="https://github.com/user-attachments/assets/14303b2f-5291-4f0d-90b8-b59d4fc2be67" />
+
+Without Toon Shader:
+<img width="901" height="575" alt="image" src="https://github.com/user-attachments/assets/8ad04f4f-4c81-4bbe-a2e5-3be2aa981452" />
+
+The Toon Shader is used for every boss, and that is so to help give more of a retro and poly feel of the boss characters with how lighting is displayed on them instead of giving more smooth gradients for lighting and shading.
+
+Bump Shader:
+<img width="1152" height="523" alt="image" src="https://github.com/user-attachments/assets/c0d61e79-c626-4d51-96dc-2bca33bcf17d" />
+The bump shader makes the texture applied to the object have more depth to it without modifying the geometry of the mesh itself. This was done through recalculating the normals of the mesh. A normal map needs to be sampled and then unpacked first, and using the rbg values the X, Y, and Z coordinates of the normal vectors along with needing to convert Tangent, Bitangent, and the object normals into world space and multiply them together into a big 3 by 3 matrix to be used in the dot product for lighting calculations with the Main Light Direction (also being normalized). The dot product is multiplied by -1 to flip it around to correct it, and saturated and multiplied with the main object textured that is sampled so that the depth effect can be applied to it, and be added to the BaseColor node in the Fragment shader to use the effect. 
+
 Rim Lighting: 
 <img width="723" height="557" alt="image" src="https://github.com/user-attachments/assets/d6c72d65-7bdf-4d19-970e-dc356a94056b" />
 
