@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BranchScene.unity
+    guid: f57c15f9bebb64fdb8657306e0deef52
+  - enabled: 1
     path: Assets/Scenes/BlackLightTitleScene.unity
     guid: bb0da3d8235374fa88f19606436c3cc6
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 1cf34b06a4fba4b83b888fdbcb1dc00c
-  - enabled: 1
-    path: Assets/Scenes/BranchScene.unity
-    guid: f57c15f9bebb64fdb8657306e0deef52
   - enabled: 1
     path: Assets/Scenes/JokeEnd.unity
     guid: f6b26c8ad3b0a4de9aa6d9f2416cce80
