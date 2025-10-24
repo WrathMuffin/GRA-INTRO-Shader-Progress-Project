@@ -1,7 +1,15 @@
 # ConflictSolver
 
-Rim Lighting: 
 
+Diffuse Lighting:
+<img width="882" height="435" alt="image" src="https://github.com/user-attachments/assets/782d02f1-1b48-4be7-ad6c-dff05117504d" />
+Diffuse lighting is the simplest form of lighting that uses the main light direction of the unity scene, and the normals of the object vectors. These two vectors are normalized and used in the dot product function to make a lighting value, and then use the saturate function to restrict the range, and then added it to the Base Color function of the Fragment shader. The shadows are pitch black as the lighting is only concerned with the single light source (main scene light) affecting the object, so its artifical lighting. Unfortuantly to mantain the style of our game being retro themed, we didnt find a place to use this kind of lighting.
+
+Diffuse-Ambient:
+<img width="870" height="408" alt="image" src="https://github.com/user-attachments/assets/34fbe121-0c4c-4953-b666-b3590af10cb9" />
+Diffuse Ambient is very similar to diffuse lighting, in that the process is almost the same with needing the main light and normal vectors being normalized. Though the key difference is the shadow color itself, it is not pitch black this time around but instead the shaded areas are toned down in brightness, as this lighting tries to simulate the room ambient lighting and shadows of the environment. We also couldnt find a use for it in our game unfortuantly as it conflicts with our artistic vision for it.
+
+Rim Lighting: 
 <img width="723" height="557" alt="image" src="https://github.com/user-attachments/assets/d6c72d65-7bdf-4d19-970e-dc356a94056b" />
 
 The rim lighting was accomplished by first, getting both the normal vectors of the object (in world space), and the view direction (in world space), and getting them both normalized. From there a dot product is found between them to get the lighting value, and then it is run through the saturation node so that the results are restricted between 0 and 1 (no negative numbers for lighting calculations). Then it is subtracting against 1 so that the lighting does not come from the center of the object but at the edges of it. 
