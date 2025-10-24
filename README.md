@@ -100,4 +100,22 @@ Red ominous LUT:
 
 The Red LUT is made to be more menacing with the use of purely the color red as its more associated with danger, and that is used for the feeling of tension and dread for when the main character dies to make the death more impactful for the player, even if only briefly.
 
-(INSERT COLOR CORRECTION SCREENSHOTS HERE):
+The scene before red ominous LUT:
+
+<img width="1706" height="955" alt="Screenshot 2025-10-24 at 8 17 17 AM" src="https://github.com/user-attachments/assets/c37d496d-51f4-48f3-9806-ca98ba1524b4" />
+
+After red ominous LUT is applied:
+
+<img width="1705" height="961" alt="Screenshot 2025-10-24 at 8 17 34 AM" src="https://github.com/user-attachments/assets/c75e1a60-6c87-4913-929f-2fa18dd91e60" />
+
+Solarize LUT:
+
+The solarizing LUT does what it says in the name; it creates a warped effect by reversing the tone of the image. In the game, this is used to give impact to certain actions. Namely, landing the hit on a boss will use this effect and slow down the game to enhance the impact of the final blow.
+
+The scene before solarize LUT:
+
+<img width="1706" height="955" alt="Screenshot 2025-10-24 at 8 17 17 AM" src="https://github.com/user-attachments/assets/356f2699-4428-46dd-9839-9bf24d68ce88" />
+
+After solarize LUT is applied:
+
+<img width="1710" height="961" alt="Screenshot 2025-10-24 at 8 17 01 AM" src="https://github.com/user-attachments/assets/3504d12d-e97b-4375-a5e7-4b36b7bda243" />
