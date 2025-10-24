@@ -70,8 +70,6 @@ Color Correction:
 
 Color correction changes the color and the overall mood of a scene using a Look Up Table (LUT) as a 3D texture to map out the colors in scene and replace them in the final output as a post processing effect. This effect is complex, but the gist of it is that the LUT bar property has its texture file dimensions divided by 0.5 (this is the texel offsets). Then in the subtract node 32 is subtracted by 1, which is the stand in for the 32-bit COLORS variable and then divided by 32 (what would be the COLORS variable) so that data along with the offsets can be used to calculate the coordinates using the LUT to map out the colors within the threshhold from the LUT. Once the coordinates are calculated in the LUT table to map out the colors, the LUT is sampled for the color graded pixels and outputed in the Fragment shader.
 
-(INSERT COLOR CORRECTION SCREENSHOTS HERE):
-
 Color correction was used in our project to enhance the "feeling" for major events, essentially feels different in tone. 
 
 Nostalgic LUT:
@@ -93,3 +91,5 @@ Red ominous LUT:
 <img width="1024" height="32" alt="red" src="https://github.com/user-attachments/assets/88d9761b-490a-4f72-a480-b0fdb20a3a01" />
 
 The Red LUT is made to be more menacing with the use of purely the color red as its more associated with danger, and that is used for the feeling of tension and dread for when the main character dies to make the death more impactful for the player, even if only briefly.
+
+(INSERT COLOR CORRECTION SCREENSHOTS HERE):
