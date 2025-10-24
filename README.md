@@ -25,6 +25,16 @@ Bump Shader:
 <img width="1152" height="523" alt="image" src="https://github.com/user-attachments/assets/c0d61e79-c626-4d51-96dc-2bca33bcf17d" />
 The bump shader makes the texture applied to the object have more depth to it without modifying the geometry of the mesh itself. This was done through recalculating the normals of the mesh. A normal map needs to be sampled and then unpacked first, and using the rbg values the X, Y, and Z coordinates of the normal vectors along with needing to convert Tangent, Bitangent, and the object normals into world space and multiply them together into a big 3 by 3 matrix to be used in the dot product for lighting calculations with the Main Light Direction (also being normalized). The dot product is multiplied by -1 to flip it around to correct it, and saturated and multiplied with the main object textured that is sampled so that the depth effect can be applied to it, and be added to the BaseColor node in the Fragment shader to use the effect. 
 
+In our game this is used to enhance the environment props by including the visual of having wires running through the props, as it matches with our digital environment and gives more off the effect of a technology based world the player is moving around in.
+
+The reference image we used:
+<img width="355" height="658" alt="image" src="https://github.com/user-attachments/assets/8dd4f068-1dfe-4262-a20b-03ac9dff0a58" />
+
+With bump shader:
+<img width="426" height="383" alt="image" src="https://github.com/user-attachments/assets/a8381478-a194-49ac-809d-e0517db96d45" />
+Without bump shader:
+<img width="432" height="386" alt="image" src="https://github.com/user-attachments/assets/d6c66c6f-63b4-474e-9aeb-56c963a4fc32" />
+
 Rim Lighting: 
 <img width="723" height="557" alt="image" src="https://github.com/user-attachments/assets/d6c72d65-7bdf-4d19-970e-dc356a94056b" />
 
