@@ -50,8 +50,8 @@ public class Boss : MonoBehaviour
 
     private IEnumerator Death(){
         death_cam.SetActive(true);
-        Time.timeScale = 0.0f;
-        yield return new WaitForSecondsRealtime(2.0f);
+        Time.timeScale = 0.1f;
+        yield return new WaitForSeconds(0.2f);
         Time.timeScale = 1.0f;
         scene_loader.SetActive(true);
     }

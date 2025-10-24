@@ -12,13 +12,14 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _APPLYDIFFUSE_YES
   - _APPLY_AMBIENT_YES
   - _APPLY_BUMP_NO
   - _APPLY_COLOR_CORRECTION_NO
-  - _APPLY_FLAT_SHADING_YES
-  - _APPLY_REFLECTION_YES
+  - _APPLY_FLAT_SHADING_NO
+  - _APPLY_REFLECTION_NO
   - _APPLY_RIM_YES
-  - _APPLY_SPECULAR_NO
+  - _APPLY_SPECULAR_YES
   - _APPLY_TOON_YES
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -66,13 +67,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _APPLYDIFFUSE: 0
     - _APPLY_AMBIENT: 0
     - _APPLY_BUMP: 1
     - _APPLY_COLOR_CORRECTION: 0
-    - _APPLY_FLAT_SHADING: 0
-    - _APPLY_REFLECTION: 0
+    - _APPLY_FLAT_SHADING: 1
+    - _APPLY_REFLECTION: 1
     - _APPLY_RIM: 0
-    - _APPLY_SPECULAR: 1
+    - _APPLY_SPECULAR: 0
     - _APPLY_TOON: 0
     - _Brightness: 1.5
     - _Bump_amount: 1
@@ -83,12 +85,12 @@ Material:
     - _Reflection_intensity: 1
     - _Rim_glow: 14.2
     - _Rim_power: 0
-    - _Shininess: 10
+    - _Shininess: 4
     m_Colors:
-    - _Base_color: {r: 0.2838149, g: 1, b: 0, a: 1}
+    - _Base_color: {r: 0.55771625, g: 0.7830189, b: 0.46907264, a: 1}
     - _Offset: {r: 1, g: 1, b: 0, a: 0}
-    - _Rim_color: {r: 0.5916205, g: 1, b: 0.033018887, a: 1}
-    - _Specular_color: {r: 1, g: 1, b: 1, a: 0}
+    - _Rim_color: {r: 0.14122522, g: 1, b: 0, a: 1}
+    - _Specular_color: {r: 0, g: 0.9896784, b: 1, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
