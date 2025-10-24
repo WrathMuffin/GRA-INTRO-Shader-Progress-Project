@@ -2,11 +2,13 @@
 
 
 Diffuse Lighting:
+
 <img width="882" height="435" alt="image" src="https://github.com/user-attachments/assets/782d02f1-1b48-4be7-ad6c-dff05117504d" />
 
 Diffuse lighting is the simplest form of lighting that uses the main light direction of the unity scene, and the normals of the object vectors. These two vectors are normalized and used in the dot product function to make a lighting value, and then use the saturate function to restrict the range, and then added it to the Base Color function of the Fragment shader. The shadows are pitch black as the lighting is only concerned with the single light source (main scene light) affecting the object, so its artifical lighting. Unfortuantly to mantain the style of our game being retro themed, we didnt find a place to use this kind of lighting.
 
 Diffuse-Ambient:
+
 <img width="870" height="408" alt="image" src="https://github.com/user-attachments/assets/34fbe121-0c4c-4953-b666-b3590af10cb9" />
 
 Diffuse Ambient is very similar to diffuse lighting, in that the process is almost the same with needing the main light and normal vectors being normalized. Though the key difference is the shadow color itself, it is not pitch black this time around but instead the shaded areas are toned down in brightness, as this lighting tries to simulate the room ambient lighting and shadows of the environment. We also couldnt find a use for it in our game unfortuantly as it conflicts with our artistic vision for it.
