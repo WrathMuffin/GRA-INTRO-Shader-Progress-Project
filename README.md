@@ -8,7 +8,7 @@ The rim lighting was accomplished by first, getting both the normal vectors of t
 
 <img width="440" height="587" alt="image" src="https://github.com/user-attachments/assets/39a061d4-daec-4615-b1a6-ce5b3720c0ad" />
 
-Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges.There is also the Rim color and Rim glow properties, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to amplify the glow factor of the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
+Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additional Rim glow properties, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to amplify the glow factor of the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
 
 <img width="135" height="167" alt="image" src="https://github.com/user-attachments/assets/7a931cb9-c74c-4804-91a4-66a1d85404d6" />
 <img width="496" height="427" alt="image" src="https://github.com/user-attachments/assets/6388e6cf-6458-4fcf-8794-ad3225684804" />
