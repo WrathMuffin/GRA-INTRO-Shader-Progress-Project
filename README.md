@@ -22,7 +22,9 @@ Reflection shader:
 
 The reflection shader uses a cubemap that is projected onto the object from the light reflecting off from the object. Firstly, the normal vectors and the view direction in world space are normalized, but the view direction is multiply by -1 so that the light reflects away from the object. These nodes are then connected to the Sample Reflected Cubemap node, which has the cubemap property connected (so that any cubemap can be sampled and reflected) along with the view direction and normal vectors as well with setting the sampler to have the filter be linear so it can work properly. The Reflection intensity property is multiplied with the result of the Sample Reflected Cubemap node, along with the Reflection blend property so that how much of the cube map is being projected and mixed with the texture of the object is used, and that gets also added to the Base Color node of the fragment shader to display the cube map reflection on the object surfaces. 
 
-<img width="1045" height="440" alt="image" src="https://github.com/user-attachments/assets/ad8b3e24-4e5f-4db6-b70d-2d6d26e7cd2c" />
+<img width="1488" height="744" alt="eree" src="https://github.com/user-attachments/assets/1a2b9f86-7617-420d-8363-72ba0a416183" />
+
+The above image shows the enemy (on the right) reflecting the cubemap off the polygonal skin.
 
 The reflection shader is used to further enhance the sci-fi environment, as the game literally takes place within the programming of the repository software Bithub (which is the main antagonist of the game). Along with making things glow, having parts of the environment reflect out images of code helps better convey the idea of being in the world of software and programming, and that same cube map is the same one used in the environment of the levels in displaying a more reflective material for the platforms which adds visual interest but also a sense of realism as lighting acts in a way we expect. Additionaly, this will help convey the feeling of plastic and metal, fittingly with the theme of technology.
 
