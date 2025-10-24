@@ -3,10 +3,12 @@
 
 Diffuse Lighting:
 <img width="882" height="435" alt="image" src="https://github.com/user-attachments/assets/782d02f1-1b48-4be7-ad6c-dff05117504d" />
+
 Diffuse lighting is the simplest form of lighting that uses the main light direction of the unity scene, and the normals of the object vectors. These two vectors are normalized and used in the dot product function to make a lighting value, and then use the saturate function to restrict the range, and then added it to the Base Color function of the Fragment shader. The shadows are pitch black as the lighting is only concerned with the single light source (main scene light) affecting the object, so its artifical lighting. Unfortuantly to mantain the style of our game being retro themed, we didnt find a place to use this kind of lighting.
 
 Diffuse-Ambient:
 <img width="870" height="408" alt="image" src="https://github.com/user-attachments/assets/34fbe121-0c4c-4953-b666-b3590af10cb9" />
+
 Diffuse Ambient is very similar to diffuse lighting, in that the process is almost the same with needing the main light and normal vectors being normalized. Though the key difference is the shadow color itself, it is not pitch black this time around but instead the shaded areas are toned down in brightness, as this lighting tries to simulate the room ambient lighting and shadows of the environment. We also couldnt find a use for it in our game unfortuantly as it conflicts with our artistic vision for it.
 
 Specular shader:
@@ -25,7 +27,11 @@ Without Specular:
 
 <img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
 
-The specular effect is only used once in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game.
+The specular effect is used for only one enemy in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game. Another object this is used on is the bullet, they are one of a few rounded objects. This helps emphasize the endpoint on them.
+
+Specular on the bullet (faint blue light to match the protagonist's blue rim lighting)
+
+<img width="512" height="208" alt="eeee" src="https://github.com/user-attachments/assets/2c5e1f10-0635-4f54-808d-e4a68eaffa16" />
 
 Ambient + Diffuse + Color Correction (On objects):
 <img width="1462" height="690" alt="image" src="https://github.com/user-attachments/assets/508d48d2-e5dc-4620-a451-da5fa86360c5" />
@@ -33,44 +39,60 @@ Ambient + Diffuse + Color Correction (On objects):
 We did at one point attempt ot use ambient and diffused lighting to experient to see if it pairs well with color correction of objects in our game. We used a LUT to be sampled and have the dimensions of the texture be used to calculate the offsets on the x and y axis, along with using the 32-bit COLOR variable data so that a threshold is made for color mapping so that the color mapping does not go beyond the threshhold. Then for every color pixel a position on the LUT is calculated, and that is used in color grading with the LUT sampling over that pixel with the LUT coordinate position to be used in the final output. 
 
 With color grading:
+
 <img width="1226" height="661" alt="image" src="https://github.com/user-attachments/assets/eee80393-f492-482c-af06-7de25fbbc9d8" />
+
 Without color grading:
+
 <img width="1227" height="671" alt="image" src="https://github.com/user-attachments/assets/4bbe0e94-2435-4d62-ad46-b69bcc9ab402" />
 
 as for ambient and diffused lighting, when we tried to apply it there is barely any noticable difference on the object itself, which led to us not using it for our game as there is barely a visible effect to enhance the models for our style. 
 
 With trying to apply ambient and diffused lighting:
+
 <img width="801" height="517" alt="image" src="https://github.com/user-attachments/assets/7d4fe7d1-bbf5-4a71-a027-f6deb1b1f632" />
+
 Without using ambient and diffused lighting:
+
 <img width="813" height="527" alt="image" src="https://github.com/user-attachments/assets/9e19885e-3e24-4864-a221-21af96b8d911" />
 
 Toon Shader:
+
 <img width="918" height="533" alt="image" src="https://github.com/user-attachments/assets/40524b23-4c3c-453e-92d5-8ca89db1c18b" />
+
 The Toon shader renders 3D objects to have a more cartoony appearence by applying a toon ramp texture over the object with the uv involved to simulate cell shading. The normals and the main light direction are normalized and used in the dot product and multiplied by negative one to have the lighting be calculated and corrected, and then that is hooked to the saturate function and connected to the UV port of the Sample Texture 2D node. What this does is that it modifies the UV of the object to map out the toon ramp texture (that property is plugged into the Sample Texture 2D node) to give that cell shading look depending on where the main lighting is coming from. Then that gets added to the BaseColor node of the Fragment shader to be applied and work in game. 
 
 With Toon Shader (look more closely at the object, you can find the outline of the highlights of the toon ramp):
+
 <img width="897" height="550" alt="image" src="https://github.com/user-attachments/assets/14303b2f-5291-4f0d-90b8-b59d4fc2be67" />
 
 Without Toon Shader:
+
 <img width="901" height="575" alt="image" src="https://github.com/user-attachments/assets/8ad04f4f-4c81-4bbe-a2e5-3be2aa981452" />
 
 The Toon Shader is used for every boss, and that is so to help give more of a retro and poly feel of the boss characters with how lighting is displayed on them instead of giving more smooth gradients for lighting and shading.
 
 Bump Shader:
 <img width="1152" height="523" alt="image" src="https://github.com/user-attachments/assets/c0d61e79-c626-4d51-96dc-2bca33bcf17d" />
+
 The bump shader makes the texture applied to the object have more depth to it without modifying the geometry of the mesh itself. This was done through recalculating the normals of the mesh. A normal map needs to be sampled and then unpacked first, and using the rbg values the X, Y, and Z coordinates of the normal vectors along with needing to convert Tangent, Bitangent, and the object normals into world space and multiply them together into a big 3 by 3 matrix to be used in the dot product for lighting calculations with the Main Light Direction (also being normalized). The dot product is multiplied by -1 to flip it around to correct it, and saturated and multiplied with the main object textured that is sampled so that the depth effect can be applied to it, and be added to the BaseColor node in the Fragment shader to use the effect. 
 
 In our game this is used to enhance the environment props by including the visual of having wires running through the props, as it matches with our digital environment and gives more off the effect of a technology based world the player is moving around in.
 
-The reference image we used:
+The reference image we used and converted into a normal map:
+
 <img width="355" height="658" alt="image" src="https://github.com/user-attachments/assets/8dd4f068-1dfe-4262-a20b-03ac9dff0a58" />
 
 With bump shader:
+
 <img width="426" height="383" alt="image" src="https://github.com/user-attachments/assets/a8381478-a194-49ac-809d-e0517db96d45" />
+
 Without bump shader:
+
 <img width="432" height="386" alt="image" src="https://github.com/user-attachments/assets/d6c66c6f-63b4-474e-9aeb-56c963a4fc32" />
 
 Rim Lighting: 
+
 <img width="723" height="557" alt="image" src="https://github.com/user-attachments/assets/d6c72d65-7bdf-4d19-970e-dc356a94056b" />
 
 The rim lighting was accomplished by first, getting both the normal vectors of the object (in world space), and the view direction (in world space), and getting them both normalized. From there a dot product is found between them to get the lighting value, and then it is run through the saturation node so that the results are restricted between 0 and 1 (no negative numbers for lighting calculations). Then it is subtracting against 1 so that the lighting does not come from the center of the object but at the edges of it. 
@@ -80,6 +102,7 @@ The rim lighting was accomplished by first, getting both the normal vectors of t
 Then the rim lighting effect is further restricted by the power node using the lighting calculation difference with the Rim power property so that the rim lighting can be further tightened to the object edges. There is also the Rim color and an additinoal newly added Rim glow property, where the Rim color dictates the color of the rim lighting by multiplying the lighting result with the color values of the rim color, and the Rim glow multiplies with that result to allow us to adjust how much glow the objetc will glow for the rim lighting. Then finally that result is added to the Base Color node of the fragment shader to apply it to the object in game. 
 
 <img width="135" height="167" alt="image" src="https://github.com/user-attachments/assets/7a931cb9-c74c-4804-91a4-66a1d85404d6" />
+
 <img width="496" height="427" alt="image" src="https://github.com/user-attachments/assets/6388e6cf-6458-4fcf-8794-ad3225684804" />
 
 Rim lighting was used the majority of the time in this game, as most of it takes place in a technology and sci fi inspired world. So, to help convey that the player character and the environment props like the platform objects in our game use rim lighting to make things glow. For the player the inside of the coat and rim around the fedora glows blue to convey a sense of "good" as opposed to the red "evil" for the enemies, as the surfaces emit the rim glow effect due to how the lighting is calculated for more angular objects instead of spherical. As for the platforms parts of them glow green as the background of the game is literally falling dark green texts of code so having more green lighting will match with the environment in place. 
@@ -87,6 +110,7 @@ Rim lighting was used the majority of the time in this game, as most of it takes
 Reflection shader: 
 
 <img width="887" height="742" alt="image" src="https://github.com/user-attachments/assets/468ef31d-04f9-4b59-a730-e874fae87efa" />
+
 <img width="812" height="342" alt="image" src="https://github.com/user-attachments/assets/29521cbd-d4d2-458d-b065-a0654896b025" />
 
 The reflection shader uses a cubemap that is projected onto the object from the light reflecting off from the object. Firstly, the normal vectors and the view direction in world space are normalized, but the view direction is multiply by -1 so that the light reflects away from the object. These nodes are then connected to the Sample Reflected Cubemap node, which has the cubemap property connected (so that any cubemap can be sampled and reflected) along with the view direction and normal vectors as well with setting the sampler to have the filter be linear so it can work properly. The Reflection intensity property is multiplied with the result of the Sample Reflected Cubemap node, along with the Reflection blend property so that how much of the cube map is being projected and mixed with the texture of the object is used, and that gets also added to the Base Color node of the fragment shader to display the cube map reflection on the object surfaces. 
