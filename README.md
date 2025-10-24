@@ -27,6 +27,23 @@ Without Specular:
 
 The specular effect is only used once in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game.
 
+Ambient + Diffuse + Color Correction (On objects):
+<img width="1462" height="690" alt="image" src="https://github.com/user-attachments/assets/508d48d2-e5dc-4620-a451-da5fa86360c5" />
+
+We did at one point attempt ot use ambient and diffused lighting to experient to see if it pairs well with color correction of objects in our game. We used a LUT to be sampled and have the dimensions of the texture be used to calculate the offsets on the x and y axis, along with using the 32-bit COLOR variable data so that a threshold is made for color mapping so that the color mapping does not go beyond the threshhold. Then for every color pixel a position on the LUT is calculated, and that is used in color grading with the LUT sampling over that pixel with the LUT coordinate position to be used in the final output. 
+
+With color grading:
+<img width="1226" height="661" alt="image" src="https://github.com/user-attachments/assets/eee80393-f492-482c-af06-7de25fbbc9d8" />
+Without color grading:
+<img width="1227" height="671" alt="image" src="https://github.com/user-attachments/assets/4bbe0e94-2435-4d62-ad46-b69bcc9ab402" />
+
+as for ambient and diffused lighting, when we tried to apply it there is barely any noticable difference on the object itself, which led to us not using it for our game as there is barely a visible effect to enhance the models for our style. 
+
+With trying to apply ambient and diffused lighting:
+<img width="801" height="517" alt="image" src="https://github.com/user-attachments/assets/7d4fe7d1-bbf5-4a71-a027-f6deb1b1f632" />
+Without using ambient and diffused lighting:
+<img width="813" height="527" alt="image" src="https://github.com/user-attachments/assets/9e19885e-3e24-4864-a221-21af96b8d911" />
+
 Toon Shader:
 <img width="918" height="533" alt="image" src="https://github.com/user-attachments/assets/40524b23-4c3c-453e-92d5-8ca89db1c18b" />
 The Toon shader renders 3D objects to have a more cartoony appearence by applying a toon ramp texture over the object with the uv involved to simulate cell shading. The normals and the main light direction are normalized and used in the dot product and multiplied by negative one to have the lighting be calculated and corrected, and then that is hooked to the saturate function and connected to the UV port of the Sample Texture 2D node. What this does is that it modifies the UV of the object to map out the toon ramp texture (that property is plugged into the Sample Texture 2D node) to give that cell shading look depending on where the main lighting is coming from. Then that gets added to the BaseColor node of the Fragment shader to be applied and work in game. 
