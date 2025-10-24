@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Boss : MonoBehaviour
     public AudioSource music;
     public GameObject end;
     public AudioClip death;
+    public GameObject death_cam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +25,7 @@ public class Boss : MonoBehaviour
     {
         if (enemy_hp <= 0){
             if(!BitHub){
-                scene_loader.SetActive(true);
+                StartCoroutine(Death());
             }
 
             else{
@@ -43,5 +46,13 @@ public class Boss : MonoBehaviour
             animator.SetTrigger("Damage");
             Destroy(collider.gameObject);
         }
+    }
+
+    private IEnumerator Death(){
+        death_cam.SetActive(true);
+        Time.timeScale = 0.0f;
+        yield return new WaitForSecondsRealtime(2.0f);
+        Time.timeScale = 1.0f;
+        scene_loader.SetActive(true);
     }
 }

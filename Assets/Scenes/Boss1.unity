@@ -2994,6 +2994,7 @@ MonoBehaviour:
   music: {fileID: 0}
   end: {fileID: 0}
   death: {fileID: 0}
+  death_cam: {fileID: 0}
 --- !u!1001 &693710374
 PrefabInstance:
   m_ObjectHideFlags: 0

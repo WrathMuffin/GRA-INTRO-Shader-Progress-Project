@@ -144,8 +144,6 @@ public class NewMovement : MonoBehaviour
 
     private void UponDeath(){
         if (health < 1){
-            death_source.Stop();
-            death_source.PlayOneShot(death_clip);
             StartCoroutine(Death());
         }
 
