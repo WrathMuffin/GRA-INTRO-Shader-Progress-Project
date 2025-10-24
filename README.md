@@ -9,6 +9,24 @@ Diffuse-Ambient:
 <img width="870" height="408" alt="image" src="https://github.com/user-attachments/assets/34fbe121-0c4c-4953-b666-b3590af10cb9" />
 Diffuse Ambient is very similar to diffuse lighting, in that the process is almost the same with needing the main light and normal vectors being normalized. Though the key difference is the shadow color itself, it is not pitch black this time around but instead the shaded areas are toned down in brightness, as this lighting tries to simulate the room ambient lighting and shadows of the environment. We also couldnt find a use for it in our game unfortuantly as it conflicts with our artistic vision for it.
 
+Specular shader:
+
+<img width="952" height="732" alt="image" src="https://github.com/user-attachments/assets/5b46d615-efe9-4bcc-9592-d5954d6e7219" />
+
+The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node with the Shininess property so that the lighting effect becomes a shiny dot that can be amplified or reduced in power, and the specular is multiplied with the Specular color property so that the color values are multiplied with the lighting effect to change the color of the specular. Finally that gets added to the Base Color node in the Fragment shader so that a specular dot can appear on the object.
+
+<img width="912" height="451" alt="image" src="https://github.com/user-attachments/assets/6b459d63-fe55-4a5b-a827-4aed710d0189" />
+
+With Specular:
+
+<img width="1276" height="463" alt="image" src="https://github.com/user-attachments/assets/d7334769-aae3-4fd3-935f-5457a3adb545" />
+
+Without Specular:
+
+<img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
+
+The specular effect is only used once in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game.
+
 Toon Shader:
 <img width="918" height="533" alt="image" src="https://github.com/user-attachments/assets/40524b23-4c3c-453e-92d5-8ca89db1c18b" />
 The Toon shader renders 3D objects to have a more cartoony appearence by applying a toon ramp texture over the object with the uv involved to simulate cell shading. The normals and the main light direction are normalized and used in the dot product and multiplied by negative one to have the lighting be calculated and corrected, and then that is hooked to the saturate function and connected to the UV port of the Sample Texture 2D node. What this does is that it modifies the UV of the object to map out the toon ramp texture (that property is plugged into the Sample Texture 2D node) to give that cell shading look depending on where the main lighting is coming from. Then that gets added to the BaseColor node of the Fragment shader to be applied and work in game. 
@@ -61,24 +79,6 @@ The reflection shader uses a cubemap that is projected onto the object from the 
 The above image shows the enemy (on the right) reflecting the cubemap off the polygonal skin.
 
 The reflection shader is used to further enhance the sci-fi environment, as the game literally takes place within the programming of the repository software Bithub (which is the main antagonist of the game). Along with making things glow, having parts of the environment reflect out images of code helps better convey the idea of being in the world of software and programming, and that same cube map is the same one used in the environment of the levels in displaying a more reflective material for the platforms which adds visual interest but also a sense of realism as lighting acts in a way we expect. Additionaly, this will help convey the feeling of plastic and metal, fittingly with the theme of technology.
-
-Specular shader:
-
-<img width="952" height="732" alt="image" src="https://github.com/user-attachments/assets/5b46d615-efe9-4bcc-9592-d5954d6e7219" />
-
-The specular shader is used to make objects appear more reflective by adding highlights to the surface. The main light direction vector is normalized, along with the normal vectors in world space and normalized are linked to the reflection node so that the light rays itself reflects away from the object and reacts accordingly depending on where you look. Then the reflection node is connected to the dot product node with the view direction in world space and normalized so that we can a value for the lighting, and use the saturate node to restrict the values between 0 and 1. That then gets used in the power node with the Shininess property so that the lighting effect becomes a shiny dot that can be amplified or reduced in power, and the specular is multiplied with the Specular color property so that the color values are multiplied with the lighting effect to change the color of the specular. Finally that gets added to the Base Color node in the Fragment shader so that a specular dot can appear on the object.
-
-<img width="912" height="451" alt="image" src="https://github.com/user-attachments/assets/6b459d63-fe55-4a5b-a827-4aed710d0189" />
-
-With Specular:
-
-<img width="1276" height="463" alt="image" src="https://github.com/user-attachments/assets/d7334769-aae3-4fd3-935f-5457a3adb545" />
-
-Without Specular:
-
-<img width="652" height="421" alt="image" src="https://github.com/user-attachments/assets/ed720ae0-2676-4859-a1d2-796d79f7ad80" />
-
-The specular effect is only used once in our game and that is for one of our boss fights, specifically the BitIgnore Capybara boss. It is subtle and faint, but if you were to look on the back of the base you can the faint big red highlight of the specular effect on the back. As to why this effect was applied like this to make the surface more smooth and slightly reflective for visual appeal of the boss itself. The BitIgnore boss is the most organic, realictic in terms of style (compared to a real capybara), so using the specular lighting let us hmake the boss looks more organic while still retains the low poly look for that still fits in with the retro theme of the game.
 
 Flat shader:
 
