@@ -7,12 +7,11 @@ public class LeapingBoss : MonoBehaviour
     public Transform pointB;
 
     [Header("Settings")]
-    public float speed = 2f;       // how fast the leap completes
-    public float jumpHeight = 2f;  // how high the leap goes
-    public float waitTime = 1f;    // how long to pause at each point
+    public float speed = 2f;      
+    public float jumpHeight = 2f;  
+    public float waitTime = 1f;  
 
     private Transform targetPoint;
-    private bool isLeaping = false;
 
     public NewMovement player;
 

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class MoveToPoint : MonoBehaviour
 {
     public Transform pointA;
@@ -12,7 +12,6 @@ public class MoveToPoint : MonoBehaviour
     public Animator animator;
     void Start()
     {
-        // Start moving towards point B first
         targetPoint = pointB;
     }
 
@@ -22,18 +21,14 @@ public class MoveToPoint : MonoBehaviour
             return;
         }
 
-        // Move toward the target point
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
 
-        // Check if we've reached the target
-        if (Vector3.Distance(transform.position, targetPoint.position) < 0.01f)
-        {
+        if (Vector3.Distance(transform.position, targetPoint.position) < 0.01f){
             StartCoroutine(WaitAndSwitch());
         }
     }
 
-    private System.Collections.IEnumerator WaitAndSwitch()
-    {
+    private IEnumerator WaitAndSwitch(){
         isWaiting = true;
         yield return new WaitForSeconds(waitTime);
 

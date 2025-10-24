@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,13 +41,18 @@ public class NewMovement : MonoBehaviour
     public float invincible_threshold = 2.0f;
     public SkinnedMeshRenderer object_renderer;
     public bool controllable = false;
+    public GameObject death_cam;
+    public AudioSource death_source;
+    public AudioClip death_clip;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 1.0f;
         invincible_timer = invincible_threshold;
         original_materials = object_renderer.materials;
+        death_cam.SetActive(false);
     
     }
 
@@ -100,61 +105,11 @@ public class NewMovement : MonoBehaviour
         if (!is_wall_jumping){
             rb.linearVelocity = new Vector2(horizontal * move_speed, rb.linearVelocity.y);
         }
-
-        // if (jump_input > 0){
-        //     Jump();
-        // }
-        // GroundCheck();
     }
-
-    // void Move(){
-    //     if (Input.GetKey(KeyCode.D)){
-    //         transform_body.position += transform.right * Time.deltaTime * move_speed;
-    //         transform_body.rotation = Quaternion. Euler(0, 0, 0);
-    //     }
-
-    //     if (Input.GetKey(KeyCode.A)){
-    //         transform_body.position += transform.right * Time.deltaTime * move_speed;
-    //         transform_body.rotation = Quaternion. Euler(0, 180, 0);
-    //     }
-    // }
-
-    // private void GroundCheck(){
-    //     RaycastHit2D[] ground_ray = Physics2D.BoxCastAll(transform.position, ground_box_size, 0, -transform.up, ground_box_distance);
-
-    //     for (int i = 0; i < ground_ray.Length; i++){
-    //         if (ground_ray[i].collider.gameObject.layer == 0 || ground_ray[i].collider.gameObject.layer == 6){
-    //             ground_below = true;
-    //             break;
-    //         }
-
-    //         else{
-    //             ground_below = false;
-    //         }
-    //     }
-
-    //     Debug.Log(ground_below);
-    // }
 
     private void AnimateMovement(){
         animator.SetFloat("Moving", Mathf.Abs(rb.linearVelocity.x));
         animator.SetFloat("AirMoving", rb.linearVelocity.y);
-        // if (rb.linearVelocity.x != 0 && rb.linearVelocity.y == 0){
-        //     animator.SetBool("isFall", false);
-        //     animator.SetBool("isWalking", true);
-        // }
-
-        // else{
-        //     animator.SetBool("isWalking", false);
-        // }
-
-        // if (rb.linearVelocity.y > 0){
-        //     animator.SetTrigger("jumpTrig");
-        // }
-
-        // else if (rb.linearVelocity.y < 0){
-        //     animator.SetBool("isFall", true);
-        // }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -189,7 +144,9 @@ public class NewMovement : MonoBehaviour
 
     private void UponDeath(){
         if (health < 1){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            death_source.Stop();
+            death_source.PlayOneShot(death_clip);
+            StartCoroutine(Death());
         }
 
         if (invincible_timer < invincible_threshold){
@@ -210,5 +167,12 @@ public class NewMovement : MonoBehaviour
             invincible_timer = 0.0f;
         }
 
+    }
+
+    private IEnumerator Death(){
+        death_cam.SetActive(true);
+        Time.timeScale = 0.0f;
+        yield return new WaitForSecondsRealtime(2.0f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
