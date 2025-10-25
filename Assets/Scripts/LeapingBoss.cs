@@ -1,9 +1,10 @@
 using UnityEngine;
+using System.Collections;
 
 public class LeapingBoss : MonoBehaviour
 {
-    public Transform pointA;
-    public Transform pointB;
+    public Transform point_one;
+    public Transform point_two;
     public float speed = 2f;      
     public float jumpHeight = 2f;  
     public float waitTime = 1f;  
@@ -14,7 +15,7 @@ public class LeapingBoss : MonoBehaviour
 
     void Start()
     {
-        targetPoint = pointB;
+        targetPoint = point_two;
         Invoke("DoIt", 2.0f);
     }
 
@@ -22,11 +23,11 @@ public class LeapingBoss : MonoBehaviour
         StartCoroutine(LeapToTarget());
     }
 
-    private System.Collections.IEnumerator LeapToTarget()
+    private IEnumerator LeapToTarget()
     {
         while (true)
         {
-            if (pointA == null || pointB == null)
+            if (point_one == null || point_two == null)
                 yield break;
 
             Vector3 start = transform.position;
@@ -36,13 +37,9 @@ public class LeapingBoss : MonoBehaviour
             while (journey <= 1f)
             {
                 journey += Time.deltaTime * speed;
-
                 Vector3 horizontalPos = Vector3.Lerp(start, end, journey);
-
                 float heightOffset = jumpHeight * Mathf.Sin(Mathf.PI * journey);
-
                 transform.position = new Vector3(horizontalPos.x, horizontalPos.y + heightOffset, horizontalPos.z);
-
                 yield return null;
             }
 

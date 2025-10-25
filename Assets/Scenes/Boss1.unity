@@ -2994,7 +2994,7 @@ MonoBehaviour:
   music: {fileID: 0}
   end: {fileID: 0}
   death: {fileID: 0}
-  death_cam: {fileID: 0}
+  death_cam: {fileID: 891833794}
 --- !u!1001 &693710374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3805,7 +3805,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 38d20d4ef1b8b40b5a4d1a9bbcf33592, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5723,7 +5723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 01f2af463e86f48e18b4ce692cdf75f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eda9b500e18ab4644a58e47f38237a4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9878,7 +9878,7 @@ MonoBehaviour:
   pointA: {fileID: 113494228}
   pointB: {fileID: 781912742}
   speed: 5
-  waitTime: 0.1
+  wait_time: 1
   animator: {fileID: 0}
 --- !u!4 &2053160011 stripped
 Transform:
