@@ -14,6 +14,8 @@ public class Boss : MonoBehaviour
     public GameObject end;
     public AudioClip death;
     public GameObject death_cam;
+    public GameObject bulletEffect;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,9 +46,13 @@ public class Boss : MonoBehaviour
         if (collider.CompareTag("Bullet")){
             enemy_hp = enemy_hp - damage_take;
             animator.SetTrigger("Damage");
+            GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up));
+            
             Destroy(collider.gameObject);
         }
     }
+
+    
 
     private IEnumerator Death(){
         death_cam.SetActive(true);

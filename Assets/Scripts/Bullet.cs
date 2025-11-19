@@ -5,6 +5,10 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
     public float bullet_speed;
+    //hit effect stuff
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,10 +23,23 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
-        if(collider.CompareTag("Blocker")){
+        if(collider.CompareTag("Blocker")){     
             Destroy(gameObject);
         }
+
+        if (collider.CompareTag("Enemy"))
+        {
+            //this is supposed to spawn in the bullet hole
+           
+            Destroy(gameObject);
+        }
+
+        
     }
+
+    
+
+ 
 
     void DestroyAfterAWhile(){
         Destroy(gameObject);

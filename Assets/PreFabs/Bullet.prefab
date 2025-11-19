@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   bullet_speed: 200
+  bulletHole: {fileID: 3704420090241611906, guid: 18c8e9bdc7f3ac84f92f47d1affdc622, type: 3}
 --- !u!54 &5202093851881565043
 Rigidbody:
   m_ObjectHideFlags: 0
