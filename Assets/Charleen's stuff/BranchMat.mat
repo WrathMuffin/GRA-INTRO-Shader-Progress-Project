@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GithubBars 1
+  m_Name: BranchMat
   m_Shader: {fileID: -6465566751694194690, guid: 10f53b498944b044fa1e52c42dcffbd2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -87,7 +87,7 @@ Material:
     - _Rim_power: 5
     - _Shininess: 10
     m_Colors:
-    - _Base_color: {r: 0.19330722, g: 0.2264151, b: 0.2264151, a: 1}
+    - _Base_color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
     - _Offset: {r: 1, g: 1, b: 0, a: 0}
     - _Rim_color: {r: 0.47450978, g: 1, b: 1, a: 1}
     - _Specular_color: {r: 1, g: 1, b: 1, a: 0}
