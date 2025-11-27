@@ -212,7 +212,7 @@ After solarize LUT is applied:
 <img width="1710" height="961" alt="Screenshot 2025-10-24 at 8 17 01 AM" src="https://github.com/user-attachments/assets/3504d12d-e97b-4375-a5e7-4b36b7bda243" />
 
 
-Final Project Effects and Shaders implemented:
+# Final Project Effects and Shaders implemented:
 
 Outline Shader:
 
@@ -226,6 +226,12 @@ The hologram shader in our game generally is composed of transparency, rim light
 We used this shader effect for the barrier in our game that the player must shoot to destroy in the tutorial level, and the blocker for the Bitignore Capybara boss fight. The barrier itself is meant to be very glitchy, distorted, and constrast heavily with the green and black color scheme of our game. For the hologram effects applied, it is mainly the transparency, rim lighting, and the faint scrolling of the sinewaves that are applied to it so that emphasizes its holographic appearence. Unlike other things in the game which are solid and opaque, this barriers is transparenct and unstable. The use of the holographic effect in our game ties with the technological setting of our game being in a computer, as errors and bugs are commonly associated to be bad and draw attention to issues in programs or games. In this case, it is standing in the way of the player and not behaving like the other solid platforms in our environments. 
 
 <img width="685" height="506" alt="image" src="https://github.com/user-attachments/assets/650dbdea-6e9d-4080-abe4-9cbc3c077dcc" />
+
+As for the blocker, it is meant to draw attention to the object as it is shielding the boss from taking damage, and that it highlights the need of jumping behind him and shooting him from there as he is vulnurable only from the back. This also ties into our setting for the game as it gives it a more digital appearence than just a red glowing shield, it gives it pink colored scan lines to reference scan lines in old monitor screens from computers and TVs.
+
+<img width="340" height="396" alt="image" src="https://github.com/user-attachments/assets/55f3e5a9-a61d-4b76-938d-7bda3337e005" />
+
+
 
 
 
