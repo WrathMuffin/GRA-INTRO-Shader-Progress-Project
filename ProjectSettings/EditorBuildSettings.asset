@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level0.unity
     guid: 381857db65ce042dcb09abe80b4f1270
   - enabled: 1
-    path: Assets/Scenes/FinalBoss2.unity
+    path: Assets/Scenes/BitBoss Room.unity
     guid: 3fb0906656db24240b7d8cf65eaeaa35
   - enabled: 1
     path: Assets/Scenes/FinalBoss1.unity
