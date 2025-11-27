@@ -248,6 +248,7 @@ The sparking wires effect:
 
 The red barrier particle effects show that the glitchy code in the game manifesting as that obstacle is getting damaged from the player's bullets, which adds immersion to the game's world showing that the player is interacting within the confines of a digital reality. Similarly for the bosses, it shows that they too are also made up of programming code which makes sense as they represent the different problems and aspects of the Bithub repository application as a whole, and having the green sparks further represent the idea of code and programming.
 
+
 PBR/Metallic effect:
 In our game there is one dynamic, prop introduced which are these hanging wires that subtly sway in the air and spark blue particles. This particular shader effect was applied to it along with two others, but for here this wire is meant to have some shininess to it like what the PBR shader is supposed to do. This was simply accomplished by using the same texture for the albedo/base texture being used on the object, and multiplying it with the math for the specular lighting effect. The specular itself was accomplished by finding the dot product between the sum of the view direction and main light direction along with the object normals in world space, and them saturating the result and plugging it to the power node so that a property can control the size of the shine, and you multiply it with a color property to change how it looks and then multiply it with the texture and another property that controls the brightness to be more noticable. THis can finally be added to the final output in the fragment shader. 
 <img width="1342" height="620" alt="image" src="https://github.com/user-attachments/assets/78c1b791-a288-423c-a06a-0694a3e4400f" />
@@ -264,6 +265,10 @@ Without using the metallic effect:
 
 The reason this was used for this environmental prop, was that this wire is supposed to be shinny to make it more visually interesting in appearance, as it makes it look like the light in the environment is reflecting off and illuminating it which adds a bit of immersion in how it looks. Also, the shinny appearence ties into computers with generally being more plastic and smooth, and wires are related to technology in general so the smoothness emphasizes that aspect more.
 
+
+Emission Effect:
+Another thing about the wires is the use of emission, specifically the glowing green sections of the wire emitting light. This was accomplished by sampling the emission texture for the wire, multiply it with the calculations for the dot product rim lighting with using the view direction and object normals in world space. However, this time the lighting is not restricted within the power node to covert the entire texture and it is multipied with a property to increase the brightness. Afterwards that gets added on top of the base texture for the final color output for the wires. 
+<img width="1330" height="782" alt="image" src="https://github.com/user-attachments/assets/0228fd36-b4b8-462d-a4a6-3ab9fbe40553" />
 
 
 
