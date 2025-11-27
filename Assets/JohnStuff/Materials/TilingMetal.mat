@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 73c7673f6b3184545ab6b36d99fc8368, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: 69cb0c376cf0b4f69907bd1a3aad967d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionTex:
         m_Texture: {fileID: 2800000, guid: 29e93b53f26c59847b5aa9a3b3ac608b, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -54,8 +58,10 @@ Material:
     - _BumpAmt: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReflectAmt: 0.562
+    - _ReflectIntensity: 0.805
     m_Colors:
-    - _BaseColor: {r: 0.88916105, g: 1, b: 0.7528302, a: 1}
+    - _BaseColor: {r: 0.81668174, g: 0.89433956, b: 0.72053397, a: 1}
     - _Tiling: {r: 5, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
