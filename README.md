@@ -285,6 +285,36 @@ Then the world space vertex positions from the x and z axis (from the split node
 
 The sway effect was done in a shader instead of being animated in Unity or in Blender was because to further enhance the realism and immersion of the prop itself, the swaying must be done procedurally. If it was animated then the motion would look more stiff, and artifical which will not fit our game. The swaying done within the shader code helps makes the movement look more natural in this regard, as it simulates gravity for the wires which adds weight and a sense of realism in the game world because it is implying that these metallic, glowing wires have some heaviness to it. 
 
+<img width="137" height="497" alt="image" src="https://github.com/user-attachments/assets/72db08cb-77ca-4bf5-a9cd-9c214aed2333" />
+
+
+Pixelation effect:
+To conclude, there is a post processing effect we added to the game which pixelates the screen. This was done by making a URP Fullscreen Shader Graph, and then there is the Screen Position node that samples the UB coordinates of each and every pixel. It is set in raw mode for easier axis in manipulating the UVs, and then it is plugged into the split node so that the X and Y axis coordinates are used to be multiplied by a property as a scalar value, and then it is plugged to the Floor node to always round down the values and divided by said property so we can pixelate the screen better. The result is then plugged the Scene Color node to sample the colors within scene and combine that with the newly scaled pixels that gets plugged into the Fragment shader in the final color output.
+
+<img width="1107" height="258" alt="image" src="https://github.com/user-attachments/assets/b7a54991-6928-47c2-a393-7f2b6d26e0f1" />
+
+Though, the material from this shader must be created, and then in the Unity project the PC_Renderer asset which houses the render settings in URP must be accessed to create a fullscreen pass, so that the material can be applied to the screen and pixelate every thing in view:
+
+<img width="562" height="332" alt="image" src="https://github.com/user-attachments/assets/54bf97a6-0814-41ea-baf0-e870cfe9be36" />
+
+Also to note, this was set to render before transparents so that our particle effects do not disappear in game. 
+
+We used this in our game because we want our game to be low-poly in style, but we only really had low poly models to convey that. This further emphasizes that aspect of our art direction greatly because generally pixelation is associated with low fidelity graphics like that of older games, so combined with the low poly models and the screen pixelation this enhances our presentation to be more retro for visual apeal.
+
+With pixelation:
+
+<img width="1357" height="797" alt="image" src="https://github.com/user-attachments/assets/0ef76b36-bb56-4897-bc93-0fe1a9694704" />
+
+Without pixelation:
+<img width="1377" height="781" alt="image" src="https://github.com/user-attachments/assets/56c5c7e2-c3e1-4541-bbb9-bb07f4cec141" />
+
+(This was the video used to figure out how to pull off the effect: https://www.youtube.com/watch?v=e7cCIUlGvok)
+
+
+
+
+
+
 
 
 
