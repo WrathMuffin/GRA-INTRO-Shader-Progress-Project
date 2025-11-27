@@ -271,5 +271,20 @@ Another thing about the wires is the use of emission, specifically the glowing g
 <img width="1330" height="782" alt="image" src="https://github.com/user-attachments/assets/0228fd36-b4b8-462d-a4a6-3ab9fbe40553" />
 
 
+This was done for the wires to show further that there is not only current being run through it to explain the sparking, but also the glowing effect adds to the environment of the game through visual cohesion as it further emphasizes one of the main colors used being green. The glowing also adds visual interest in the environment as it implies further that power in this world is being used from the platforms and ceilings it is hanging from. Thus enhancing the technology aspect of this game's setting.
+
+
+Swaying effect:
+Finally for the hanging wires, there is this swaying shader effect that is applied to it to make more natural and fluid movements for it. How it works is that firstly the wires mesh itself has vertex coloring to control how the swaying effect will be applied in a gradient (the more white the colors are, the more the sway will be applied):
+
+<img width="290" height="642" alt="image" src="https://github.com/user-attachments/assets/503b6be7-925d-4363-bd19-72c99504b060" />
+
+Then the world space vertex positions from the x and z axis (from the split node) is formed into a vector and plugged into the UV port of the Tiling and Offset node. One property controls the size of the swaying effect in the tiling port, and the product of the time node and the swaying speed variable is plugged into the offset port to control the speed of the sway effect. From there a Voronoi node is connected from the Tiling and Offset node to create and animate a noise texture, which is how the vertex displacement will be done, and it is multiplied with another property that controls the sway intensity of the displacement and the vertex color data to apply the affect on the mapped out vertex coloring on the mesh. Then that gets added to the vertex positions of the object in object space and the sum is plugged into the Position node in the vertex shader.
+
+<img width="1257" height="696" alt="image" src="https://github.com/user-attachments/assets/c9efe461-bcc5-4055-8a35-7ae5805dbbaa" />
+
+The sway effect was done in a shader instead of being animated in Unity or in Blender was because to further enhance the realism and immersion of the prop itself, the swaying must be done procedurally. If it was animated then the motion would look more stiff, and artifical which will not fit our game. The swaying done within the shader code helps makes the movement look more natural in this regard, as it simulates gravity for the wires which adds weight and a sense of realism in the game world because it is implying that these metallic, glowing wires have some heaviness to it. 
+
+
 
 
