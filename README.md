@@ -231,6 +231,27 @@ As for the blocker, it is meant to draw attention to the object as it is shieldi
 
 <img width="340" height="396" alt="image" src="https://github.com/user-attachments/assets/55f3e5a9-a61d-4b76-938d-7bda3337e005" />
 
+Particle Effects:
+In our game to enhance the experience for game juice to make things feel more responsive, and for a minor environmental prop we added glowing spark like particle effects for various things in our game. The particles can be prominently seen when the player either shoots and destroys the red glitchy barrier and a flurry of red binary numbers appear, or when the player shoots the boss and green sparks emit from where the boss was hit at. There is also that blue sparks appear from hanging wires seen in the levels to emphasize that these hanging swaying wires are live and are broken as current runs through them, which for our setting being technological and sci fi it works as it highlights electricity and code being present and used in this game's world. 
+
+The barrier damage effect:
+<img width="523" height="372" alt="image" src="https://github.com/user-attachments/assets/70e272cd-2805-4d86-9c77-f93186171c1f" />
+
+barrier explosion effect:
+<img width="412" height="363" alt="image" src="https://github.com/user-attachments/assets/964dd10f-c7df-4810-94e0-b4d51f341bf1" />
+
+The boss damage effect:
+<img width="485" height="385" alt="image" src="https://github.com/user-attachments/assets/b79c88cf-e912-4c8b-a58b-135ce8d12c62" />
+
+The sparking wires effect:
+<img width="505" height="416" alt="image" src="https://github.com/user-attachments/assets/79a49c44-0e29-457f-a884-e83ef9e014e6" />
+
+The red barrier particle effects show that the glitchy code in the game manifesting as that obstacle is getting damaged from the player's bullets, which adds immersion to the game's world showing that the player is interacting within the confines of a digital reality. Similarly for the bosses, it shows that they too are also made up of programming code which makes sense as they represent the different problems and aspects of the Bithub repository application as a whole, and having the green sparks further represent the idea of code and programming.
+
+PBR/Metallic effect:
+
+
+
 
 
 
