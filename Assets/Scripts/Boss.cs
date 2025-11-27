@@ -9,12 +9,15 @@ public class Boss : MonoBehaviour
     public int damage_take = 5;
     public Animator animator;
     public GameObject scene_loader;
+
     public bool BitHub = false;
+
     public AudioSource music;
     public GameObject end;
     public AudioClip death;
     public GameObject death_cam;
     public GameObject bulletEffect;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,12 +49,30 @@ public class Boss : MonoBehaviour
         if (collider.CompareTag("Bullet")){
             enemy_hp = enemy_hp - damage_take;
             animator.SetTrigger("Damage");
-            GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up));
-            
+            determineBulletSpawn(collider);
+            //GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up));
+
             Destroy(collider.gameObject);
         }
     }
 
+    void determineBulletSpawn(Collider collider)
+    {
+        //basically the direction of the colliing bullet to the boss is checked, and then it gets
+        //corrected otherwise the angle of the bullet hit effect will always be at a tilted angle.
+        //if the angle is in the positives then it will play at the corresponding front 
+        //if its in the negatives it plays at the corresponding back
+        Vector3 directionOfBossToBullet = collider.transform.position - this.transform.position;
+        if (directionOfBossToBullet.x >0)
+        {
+            directionOfBossToBullet.x = 90;
+        }
+        if (directionOfBossToBullet.x < 0)
+        {
+            directionOfBossToBullet.x = -90;
+        }
+        GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(directionOfBossToBullet));
+    }
     
 
     private IEnumerator Death(){

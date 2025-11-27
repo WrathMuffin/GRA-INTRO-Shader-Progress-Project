@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2817053409955678543
+--- !u!114 &-7009163078054055679
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GlowingTIlingTex
-  m_Shader: {fileID: -6465566751694194690, guid: c813b737d1d637f40ac9c3fc3bb5862c, type: 3}
+  m_Name: HoloFrag3
+  m_Shader: {fileID: -6465566751694194690, guid: 31ce35b7f00858446a3506177f7e9066, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -30,28 +30,15 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Emission:
-        m_Texture: {fileID: 2800000, guid: 15098250eb9ed9b47ab4d75febfa0b25, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 15098250eb9ed9b47ab4d75febfa0b25, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicTex:
-        m_Texture: {fileID: 2800000, guid: 15098250eb9ed9b47ab4d75febfa0b25, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_5a668af59d084d758150cf178e2dfb40_Out_0_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 20445c2787d5bf040b43e9487fec7394, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5c7092df645e640388b7e37af6dfa412, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -68,27 +55,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0
-    - _AlphaToMask: 0
-    - _Blend: 0
-    - _CastShadows: 1
-    - _Cull: 2
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
-    - _EmissGlow: 5
-    - _OffsetX: 1
-    - _OffsetY: 5
+    - _LineFrequency: 45
+    - _LineSpeed: 27
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0.37
-    - _SrcBlend: 1
-    - _SrcBlendAlpha: 1
-    - _Surface: 0
-    - _Tiling: 10
-    - _ZTest: 4
-    - _ZWrite: 1
-    - _ZWriteControl: 0
+    - _RimIntensity: 1
+    - _TextureBrightness: 5
+    - _Transparency: 0.01
+    - _WaveAmplitude: 0.05
+    - _WaveSpeed: 3
     m_Colors:
-    - _SpecColor: {r: 0.53434676, g: 0.94716984, b: 0.554005, a: 1}
+    - _FresColor: {r: 1, g: 0.27058828, b: 0.28702685, a: 1}
+    - _LineColor: {r: 0.23921569, g: 0.17254902, b: 0.18875338, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

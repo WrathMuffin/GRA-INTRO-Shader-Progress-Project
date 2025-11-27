@@ -4,6 +4,8 @@ public class Block : MonoBehaviour
 {
     Animator animator;
     public int health = 5;
+    public GameObject bulletEffect, explosionEffect;
+    public Transform spawnEXPLOSION;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,8 +23,10 @@ public class Block : MonoBehaviour
             Destroy(collider.gameObject);
             health = health - 1;
             animator.SetTrigger("BlockDamage");
+            GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up*-1));
 
             if (health < 1){
+                GameObject explosion = Instantiate(explosionEffect, spawnEXPLOSION);
                 Destroy(gameObject);
             }
         }
