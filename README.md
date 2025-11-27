@@ -210,3 +210,24 @@ The scene before solarize LUT:
 After solarize LUT is applied:
 
 <img width="1710" height="961" alt="Screenshot 2025-10-24 at 8 17 01 AM" src="https://github.com/user-attachments/assets/3504d12d-e97b-4375-a5e7-4b36b7bda243" />
+
+
+Final Project Effects and Shaders implemented:
+
+Outline Shader:
+
+The outline shader and it's usage in our game is to highlight the importance of certain objects, mainly the player and (INSERT OTHER EXAMPLES). As the outline shader draws attention from the viewer as it emphasizes the subjects that it is outlining, and it does so also by making it stand out from the background (which color palette wise its mainly comprised of green and black like old school computer code) but also white as well. Color also plays into context of different elements of the game, mainly green being "good" or non-hazardous, and red representing danger or a threat. 
+
+Hologram Shader:
+The hologram shader in our game generally is composed of transparency, rim lighting, and a scrolling sine wave effect. For the first two, the transparnecy was complished from modifying the shader settings to be transparent to render the object as so, and the rim lighting was calculated by using the dot product of the view direction and the object normals in world space and subtracting 1 to bring the light around the object edges. As for the sine waves, that was done by multiplying the UV on the Y axis (G channel in the split node) with a property to dictate the frequency of the sine waves, and added it with the product of the speed property multiplying the time node to control how fast the sine waves scroll. The result is then plugged into the sine node, and connected to a step node with a float number of 0.5 so that we can make the hard edges for the sine waves, and finally you can multiply it with a color property and add that for the final output in the fragment shader.
+
+<img width="1316" height="497" alt="image" src="https://github.com/user-attachments/assets/e34af4cb-77f0-462d-813d-01a251ed7c20" />
+
+We used this shader effect for the barrier in our game that the player must shoot to destroy in the tutorial level, and the blocker for the Bitignore Capybara boss fight. The barrier itself is meant to be very glitchy, distorted, and constrast heavily with the green and black color scheme of our game. For the hologram effects applied, it is mainly the transparency, rim lighting, and the faint scrolling of the sinewaves that are applied to it so that emphasizes its holographic appearence. Unlike other things in the game which are solid and opaque, this barriers is transparenct and unstable. The use of the holographic effect in our game ties with the technological setting of our game being in a computer, as errors and bugs are commonly associated to be bad and draw attention to issues in programs or games. In this case, it is standing in the way of the player and not behaving like the other solid platforms in our environments. 
+
+<img width="685" height="506" alt="image" src="https://github.com/user-attachments/assets/650dbdea-6e9d-4080-abe4-9cbc3c077dcc" />
+
+
+
+
+
