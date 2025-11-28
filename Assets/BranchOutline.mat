@@ -20,12 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerOutlne
+  m_Name: BranchOutline
   m_Shader: {fileID: -6465566751694194690, guid: 4586e1e58e9094252906fa48e8b77686, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ENABLE_DISTANCE_CORRECTION_YES
+  - _ENABLE_DISTANCE_CORRECTION_NO
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -52,9 +52,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ENABLE_DISTANCE_CORRECTION: 0
-    - _FadeDistance: 75
-    - _OutlineThickness: 0.01
+    - _ENABLE_DISTANCE_CORRECTION: 1
+    - _FadeDistance: 119.84
+    - _OutlineThickness: 0.0375
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
