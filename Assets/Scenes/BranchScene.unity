@@ -2325,11 +2325,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cab92b84c1564a84db4afb01263878dc, type: 2}
   - {fileID: 2100000, guid: 9831ce044984f4dc88213bfcc106f113, type: 2}
   - {fileID: 2100000, guid: e810ef9090b32c146b80d332229676ba, type: 2}
+  - {fileID: 2100000, guid: 6a31e176856bf46a4881f39f9e5834c7, type: 2}
+  - {fileID: 2100000, guid: 8074beb20d5134115bf36b7725fb7d7c, type: 2}
+  - {fileID: 2100000, guid: 63eb1c0e2d7354d079230d8ce6e10b82, type: 2}
+  - {fileID: 2100000, guid: 9acce0324a29048589175403b9779a56, type: 2}
   stencil_shaders:
   - {fileID: 2100000, guid: 278162541ac214ba09acc735d19c8c91, type: 2}
   - {fileID: 2100000, guid: f5199480c93c545f0811856455ec1838, type: 2}
-  - {fileID: 2100000, guid: 8074beb20d5134115bf36b7725fb7d7c, type: 2}
-  - {fileID: 2100000, guid: 6a31e176856bf46a4881f39f9e5834c7, type: 2}
   john_shaders: []
 --- !u!1 &828826847
 GameObject:
