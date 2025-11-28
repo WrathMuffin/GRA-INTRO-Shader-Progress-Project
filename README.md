@@ -1,4 +1,6 @@
-# Shaders used in ConflictSolver (PART 1) *NOTE: FOR FINAL PROJECT, PLEASE SCROLL DOWN TO "Final Project Effects and Shaders Implemented" section*
+# Shaders used in ConflictSolver (PART 1) 
+
+*NOTE: FOR FINAL PROJECT, PLEASE SCROLL DOWN TO "Final Project Effects and Shaders Implemented" section*
 
 
 Diffuse Lighting:
