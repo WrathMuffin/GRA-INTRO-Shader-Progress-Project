@@ -174,7 +174,7 @@ Material:
     - _Reflection_blend: 1
     - _Reflection_intensity: 1
     - _Rim_glow: 200
-    - _Rim_power: 4.3
+    - _Rim_power: 3.59
     - _Ripple_density: 5
     - _Ripple_egde_sharpness: 0.5
     - _Ripple_shininess: 5
