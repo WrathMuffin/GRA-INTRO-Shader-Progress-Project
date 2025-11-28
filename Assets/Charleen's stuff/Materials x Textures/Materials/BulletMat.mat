@@ -20,7 +20,7 @@ Material:
   - _APPLY_REFLECTION_YES
   - _APPLY_RIM_YES
   - _APPLY_SPECULAR_NO
-  - _APPLY_TEXTURE_YES
+  - _APPLY_TEXTURE_NO
   - _APPLY_TOON_YES
   m_InvalidKeywords: []
   m_LightmapFlags: 4
