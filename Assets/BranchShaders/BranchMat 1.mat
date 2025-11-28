@@ -20,7 +20,7 @@ Material:
   - _APPLY_REFLECTION_NO
   - _APPLY_RIM_NO
   - _APPLY_SPECULAR_NO
-  - _APPLY_TEXTURE_YES
+  - _APPLY_TEXTURE_NO
   - _APPLY_TOON_NO
   m_InvalidKeywords:
   - _APPLY_TEXTURE_No
