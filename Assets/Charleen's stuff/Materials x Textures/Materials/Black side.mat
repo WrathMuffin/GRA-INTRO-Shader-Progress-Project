@@ -24,7 +24,8 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 05ee180354ad83941bfaa9c09896d6e2, type: 3}
   m_Parent: {fileID: 2100000, guid: cab92b84c1564a84db4afb01263878dc, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _APPLY_TEXTURE_YES
   m_InvalidKeywords:
   - _APPLYDIFFUSE_YES
   - _APPLY_AMBIENT_NO
@@ -45,9 +46,14 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: 69cb0c376cf0b4f69907bd1a3aad967d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _APPLY_TEXTURE: 0
     - _Brightness: 1
     - _BumpAmt: 0.5
     m_Colors:

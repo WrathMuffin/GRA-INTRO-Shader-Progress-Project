@@ -33,7 +33,7 @@ Material:
   - _APPLY_REFLECTION_NO
   - _APPLY_RIM_YES
   - _APPLY_SPECULAR_YES
-  - _APPLY_TEXTURE_YES
+  - _APPLY_TEXTURE_NO
   - _APPLY_TOON_YES
   m_InvalidKeywords:
   - _ENABLE_DISTANCE_CORRECTION_YES
@@ -101,6 +101,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e90b3983200448099be41610cc888c48_Texture_1_Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}

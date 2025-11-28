@@ -4,6 +4,7 @@ public class TextureToggle : MonoBehaviour
 {
     public Material[] charco_shaders;
     public Material[] stencil_shaders;
+    public Material[] john_shaders;
     bool textures_on = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

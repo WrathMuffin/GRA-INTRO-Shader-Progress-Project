@@ -20,6 +20,7 @@ Material:
   - _APPLY_REFLECTION_NO
   - _APPLY_RIM_NO
   - _APPLY_SPECULAR_NO
+  - _APPLY_TEXTURE_YES
   - _APPLY_TOON_NO
   m_InvalidKeywords:
   - _ENABLE_DISTANCE_CORRECTION_YES
@@ -50,6 +51,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e90b3983200448099be41610cc888c48_Texture_1_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Toon_ramp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +81,7 @@ Material:
     - _APPLY_REFLECTION: 1
     - _APPLY_RIM: 1
     - _APPLY_SPECULAR: 1
+    - _APPLY_TEXTURE: 0
     - _APPLY_TOON: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0

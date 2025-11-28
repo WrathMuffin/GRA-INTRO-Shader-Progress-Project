@@ -7,12 +7,26 @@ public class ShaderToggle : MonoBehaviour
 {
     public GameObject lighting;
     public Camera main_cam;
-    public Material pixel_effect;
     public static bool post_process = true;
     public GameObject[] particles;
     UniversalAdditionalCameraData cam_data;
+    public string featureName = "My FullScreen Pass";
+
+    //RendererFeature targetFeature;
 
     void Start(){
+        // var data = cam.GetUniversalAdditionalCameraData();
+        // var renderer = data.scriptableRenderer;
+
+        // foreach (var f in renderer.rendererFeatures)
+        // {
+        //     if (f.name == featureName)
+        //     {
+        //         targetFeature = f;
+        //         break;
+        //     }
+        // }
+
         cam_data = main_cam.GetUniversalAdditionalCameraData();
     }
 
@@ -24,7 +38,9 @@ public class ShaderToggle : MonoBehaviour
                 post_process = false;
                 lighting.SetActive(false);
                 cam_data.renderPostProcessing = false;
-                pixel_effect.SetFloat("BlendAmt", 0);
+
+                var urp = (UniversalRenderPipelineAsset)GraphicsSettings.currentRenderPipeline;
+                var renderer = urp.scriptableRenderer;  
 
                 if (particles.Length != 0){
                     for (int i = 0; i < particles.Length; i++){
@@ -37,7 +53,6 @@ public class ShaderToggle : MonoBehaviour
                 post_process = true;
                 lighting.SetActive(true);
                 cam_data.renderPostProcessing = true;
-                pixel_effect.SetFloat("BlendAmt", 1);
                 
                 if (particles.Length != 0){
                     for (int i = 0; i < particles.Length; i++){

@@ -1619,7 +1619,7 @@ MonoBehaviour:
   end: {fileID: 120227867}
   death: {fileID: 8300000, guid: ca56163dd221944f7ad0f1ea126d15f6, type: 3}
   death_cam: {fileID: 0}
-  bulletEffect: {fileID: 0}
+  bulletEffect: {fileID: 886685120136408709, guid: aa6fb72c74241c644aec67b11706e677, type: 3}
 --- !u!65 &217706761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2677,6 +2677,85 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &410992163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410992166}
+  - component: {fileID: 410992165}
+  - component: {fileID: 410992164}
+  m_Layer: 0
+  m_Name: Toggler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &410992164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410992163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffc6cd6ecde44f369fedba99954b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShaderToggle
+  lighting: {fileID: 410087039}
+  main_cam: {fileID: 330585545}
+  particles: []
+  featureName: My FullScreen Pass
+--- !u!114 &410992165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410992163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e32b74df1504bb2ae8138221304f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextureToggle
+  charco_shaders:
+  - {fileID: 2100000, guid: 23c561600f69e4cd8a66f23f7de7b1e7, type: 2}
+  - {fileID: 2100000, guid: d49dcaf982f83004daf474e5c7e1aafc, type: 2}
+  - {fileID: 2100000, guid: 5c2a69276a4ff3e46bbf92633594b750, type: 2}
+  - {fileID: 2100000, guid: 1bb95048eb8571f48be66314ecaeeeae, type: 2}
+  - {fileID: 2100000, guid: 361645eb82f00c247acac96a83840640, type: 2}
+  - {fileID: 2100000, guid: 6992c5f0d874db9458d1eb990a23c7da, type: 2}
+  - {fileID: 2100000, guid: 8b92870d672c4d94a99230779e4ee28c, type: 2}
+  - {fileID: 2100000, guid: 6e2819a79d03d664da78e867a870e48d, type: 2}
+  - {fileID: 2100000, guid: cab92b84c1564a84db4afb01263878dc, type: 2}
+  - {fileID: 2100000, guid: 9831ce044984f4dc88213bfcc106f113, type: 2}
+  - {fileID: 2100000, guid: e810ef9090b32c146b80d332229676ba, type: 2}
+  stencil_shaders:
+  - {fileID: 2100000, guid: 278162541ac214ba09acc735d19c8c91, type: 2}
+  - {fileID: 2100000, guid: f5199480c93c545f0811856455ec1838, type: 2}
+  - {fileID: 2100000, guid: 8074beb20d5134115bf36b7725fb7d7c, type: 2}
+  - {fileID: 2100000, guid: 6a31e176856bf46a4881f39f9e5834c7, type: 2}
+  john_shaders: []
+--- !u!4 &410992166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410992163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.21923, y: 8.05534, z: -6.61881}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &436998983 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7921954276207858558, guid: 04dff5abdfaab324ab121fb5fa3a22d8, type: 3}
@@ -3523,6 +3602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2105095605953629291, guid: 9c6f15c7b91504cc3884a730ee9463c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5615427456945705594, guid: 9c6f15c7b91504cc3884a730ee9463c8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3541,7 +3624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685836541457492403, guid: 9c6f15c7b91504cc3884a730ee9463c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41254234
+      value: 0.4125
       objectReference: {fileID: 0}
     - target: {fileID: 6685836541457492403, guid: 9c6f15c7b91504cc3884a730ee9463c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11183,3 +11266,4 @@ SceneRoots:
   - {fileID: 142649383}
   - {fileID: 1699831477}
   - {fileID: 771819861}
+  - {fileID: 410992166}

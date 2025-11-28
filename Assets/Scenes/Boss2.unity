@@ -3090,6 +3090,85 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 341852513}
   m_SourcePrefab: {fileID: 100100000, guid: 04dff5abdfaab324ab121fb5fa3a22d8, type: 3}
+--- !u!1 &695916603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695916606}
+  - component: {fileID: 695916605}
+  - component: {fileID: 695916604}
+  m_Layer: 0
+  m_Name: Toggler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &695916604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695916603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffc6cd6ecde44f369fedba99954b484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShaderToggle
+  lighting: {fileID: 410087039}
+  main_cam: {fileID: 330585545}
+  particles: []
+  featureName: My FullScreen Pass
+--- !u!114 &695916605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695916603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e32b74df1504bb2ae8138221304f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextureToggle
+  charco_shaders:
+  - {fileID: 2100000, guid: 23c561600f69e4cd8a66f23f7de7b1e7, type: 2}
+  - {fileID: 2100000, guid: d49dcaf982f83004daf474e5c7e1aafc, type: 2}
+  - {fileID: 2100000, guid: 5c2a69276a4ff3e46bbf92633594b750, type: 2}
+  - {fileID: 2100000, guid: 1bb95048eb8571f48be66314ecaeeeae, type: 2}
+  - {fileID: 2100000, guid: 361645eb82f00c247acac96a83840640, type: 2}
+  - {fileID: 2100000, guid: 6992c5f0d874db9458d1eb990a23c7da, type: 2}
+  - {fileID: 2100000, guid: 8b92870d672c4d94a99230779e4ee28c, type: 2}
+  - {fileID: 2100000, guid: 6e2819a79d03d664da78e867a870e48d, type: 2}
+  - {fileID: 2100000, guid: cab92b84c1564a84db4afb01263878dc, type: 2}
+  - {fileID: 2100000, guid: 9831ce044984f4dc88213bfcc106f113, type: 2}
+  - {fileID: 2100000, guid: e810ef9090b32c146b80d332229676ba, type: 2}
+  stencil_shaders:
+  - {fileID: 2100000, guid: 278162541ac214ba09acc735d19c8c91, type: 2}
+  - {fileID: 2100000, guid: f5199480c93c545f0811856455ec1838, type: 2}
+  - {fileID: 2100000, guid: 8074beb20d5134115bf36b7725fb7d7c, type: 2}
+  - {fileID: 2100000, guid: 6a31e176856bf46a4881f39f9e5834c7, type: 2}
+  john_shaders: []
+--- !u!4 &695916606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695916603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.44131, y: -0.165, z: 6.56973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &711168716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6128476503762605230, guid: e7869f463a6d1ae41843eb9bc72b2933, type: 3}
@@ -10443,3 +10522,4 @@ SceneRoots:
   - {fileID: 2069187440}
   - {fileID: 446014440}
   - {fileID: 1776199264}
+  - {fileID: 695916606}
