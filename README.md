@@ -216,7 +216,15 @@ After solarize LUT is applied:
 
 Outline Shader:
 
-The outline shader and it's usage in our game is to highlight the importance of certain objects, mainly the player and (INSERT OTHER EXAMPLES). As the outline shader draws attention from the viewer as it emphasizes the subjects that it is outlining, and it does so also by making it stand out from the background (which color palette wise its mainly comprised of green and black like old school computer code) but also white as well. Color also plays into context of different elements of the game, mainly green being "good" or non-hazardous, and red representing danger or a threat. 
+The outline shader is used on the main branch scene where the player selects their branch to go to. The outline helps the path stand out more, to show the player it is very important (after all, once you picked a path you can't go back). It also helps with the overall look of the scene, with it being an "IRL" UI of BitHub, which utilizes outlines as separator. How the outline shader works is that, it grabs the object's scale and position, make a copy of it's shape, and expand or shrink according to a float value, which is used to determine how "thick" the line is. Then it is multiplied by a color value (line color), which basically changes the color fo the line.
+
+Below demonsatres before aand after implementing the outline shader, this is before:
+
+<img width="2048" height="1152" alt="brfore" src="https://github.com/user-attachments/assets/f2156e12-d9dd-4b65-af6f-f6ea73f92631" />
+
+And this is after:
+
+<img width="2048" height="1150" alt="after" src="https://github.com/user-attachments/assets/943ee727-88a2-4a12-ad1a-6df2a792039a" />
 
 Hologram Shader:
 The hologram shader in our game generally is composed of transparency, rim lighting, and a scrolling sine wave effect. For the first two, the transparnecy was complished from modifying the shader settings to be transparent to render the object as so, and the rim lighting was calculated by using the dot product of the view direction and the object normals in world space and subtracting 1 to bring the light around the object edges. As for the sine waves, that was done by multiplying the UV on the Y axis (G channel in the split node) with a property to dictate the frequency of the sine waves, and added it with the product of the speed property multiplying the time node to control how fast the sine waves scroll. The result is then plugged into the sine node, and connected to a step node with a float number of 0.5 so that we can make the hard edges for the sine waves, and finally you can multiply it with a color property and add that for the final output in the fragment shader.
