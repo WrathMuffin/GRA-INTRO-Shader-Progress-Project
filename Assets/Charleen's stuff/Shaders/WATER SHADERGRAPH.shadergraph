@@ -4530,9 +4530,9 @@
     "m_Theme": 0,
     "m_Position": {
         "serializedVersion": "2",
-        "x": 1790.0,
-        "y": -2328.0,
-        "width": 373.0,
+        "x": 1501.333251953125,
+        "y": -2677.333251953125,
+        "width": 372.666748046875,
         "height": 354.0
     },
     "m_Group": {
@@ -7612,9 +7612,9 @@
     "m_Theme": 0,
     "m_Position": {
         "serializedVersion": "2",
-        "x": 1354.0,
-        "y": -2586.0,
-        "width": 373.0,
+        "x": 1570.0,
+        "y": -2588.66650390625,
+        "width": 372.6666259765625,
         "height": 354.0
     },
     "m_Group": {
@@ -9354,15 +9354,15 @@
     "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
     "m_ObjectId": "722f47093012444f922e180aa0bb199e",
     "m_Title": "Thank you",
-    "m_Content": "Thank you daniel lett for the foam edge tutorial!\n",
+    "m_Content": "Thank you daniel lett for the edge detection tutorial!\n",
     "m_TextSize": 3,
     "m_Theme": 0,
     "m_Position": {
         "serializedVersion": "2",
-        "x": 610.0,
-        "y": -1437.0,
-        "width": 442.0001220703125,
-        "height": 376.9999694824219
+        "x": -1801.3333740234375,
+        "y": -1753.3333740234375,
+        "width": 442.0,
+        "height": 376.6666259765625
     },
     "m_Group": {
         "m_Id": ""
@@ -10577,10 +10577,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1125.0,
-            "y": -1524.0,
-            "width": 208.0,
-            "height": 302.0
+            "x": -1125.3333740234375,
+            "y": -1534.666748046875,
+            "width": 209.3333740234375,
+            "height": 304.0
         }
     },
     "m_Slots": [
@@ -13584,10 +13584,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2084.000244140625,
-            "y": -366.0001220703125,
-            "width": 208.0,
-            "height": 336.00006103515627
+            "x": -1947.33349609375,
+            "y": -362.66668701171877,
+            "width": 209.3333740234375,
+            "height": 339.3333435058594
         }
     },
     "m_Slots": [
