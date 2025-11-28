@@ -352,7 +352,7 @@ Push/Pull room before:
 
 Push/Pull room after:
 
-<img width="1177" height="801" alt="image" src="https://github.com/user-attachments/assets/42291eb9-a4dc-4144-9078-8d0d8ca3ec4f" />
+<img width="2048" height="1068" alt="image" src="https://github.com/user-attachments/assets/9f551d70-624a-4b7a-9def-c11281733adb" />
 
 BitHub room before:
 
@@ -360,16 +360,10 @@ BitHub room before:
 
 BitHub room after:
 
-<img width="2048" height="1068" alt="image" src="https://github.com/user-attachments/assets/9f551d70-624a-4b7a-9def-c11281733adb" />
+<img width="1177" height="801" alt="image" src="https://github.com/user-attachments/assets/42291eb9-a4dc-4144-9078-8d0d8ca3ec4f" />
 
 
-
-fitting thematically for an aquatic environment
-Set up for each is different
-push/pull has a simple pool under it
-Bithub has a sphere of water covering the room
-
-Bithub is the final boss (gives a grander and more special feel to it)
+Set up for each boss room is also different as Push/Pull has a simple pool under it, and Bithub has a sphere of water covering the room. This is becuase Push/Pull's moveset only uses it's hea dto attack, therefore contraining it's body to the pool. BitHub on the other hand swims around the secen, therefore adding a liquid backdrop for the scene makes it much more immersive and it also make sense based on how BitHub moves around and attacks. Not only that, Bithub is the final boss, so this gives the room and atmossphere a grander and more special feel to it.
 
 
 
