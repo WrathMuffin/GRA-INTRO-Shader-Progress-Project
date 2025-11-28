@@ -23,10 +23,16 @@ public class Block : MonoBehaviour
             Destroy(collider.gameObject);
             health = health - 1;
             animator.SetTrigger("BlockDamage");
-            GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up*-1));
+
+            if(ShaderToggle.post_process){
+                GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(this.transform.up*-1));
+            }
 
             if (health < 1){
-                GameObject explosion = Instantiate(explosionEffect, spawnEXPLOSION);
+                if(ShaderToggle.post_process){
+                    GameObject explosion = Instantiate(explosionEffect, spawnEXPLOSION);
+                }
+                
                 Destroy(gameObject);
             }
         }

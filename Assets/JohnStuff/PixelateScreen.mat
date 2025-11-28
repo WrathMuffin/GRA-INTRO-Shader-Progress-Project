@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _Apply: 0
     - _ApplyEffect: 1.86
-    - _BlendAmt: 1.84
+    - _BlendAmt: 1
     - _PixelSize: 300
     m_Colors: []
   m_BuildTextureStacks: []

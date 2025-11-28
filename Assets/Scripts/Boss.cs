@@ -71,7 +71,9 @@ public class Boss : MonoBehaviour
         {
             directionOfBossToBullet.x = -90;
         }
-        GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(directionOfBossToBullet));
+        if (ShaderToggle.post_process){
+            GameObject effect = Instantiate(bulletEffect, collider.transform.position, Quaternion.LookRotation(directionOfBossToBullet));
+        }
     }
     
 

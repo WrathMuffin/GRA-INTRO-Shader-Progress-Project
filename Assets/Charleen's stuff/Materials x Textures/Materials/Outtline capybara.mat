@@ -33,14 +33,15 @@ Material:
   - _APPLY_REFLECTION_NO
   - _APPLY_RIM_YES
   - _APPLY_SPECULAR_YES
+  - _APPLY_TEXTURE_YES
   - _APPLY_TOON_YES
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _ENABLE_DISTANCE_CORRECTION_YES
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -133,6 +134,7 @@ Material:
     - _APPLY_REFLECTION: 1
     - _APPLY_RIM: 0
     - _APPLY_SPECULAR: 0
+    - _APPLY_TEXTURE: 0
     - _APPLY_TOON: 0
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0

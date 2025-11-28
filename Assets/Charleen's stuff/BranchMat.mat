@@ -21,8 +21,8 @@ Material:
   - _APPLY_RIM_NO
   - _APPLY_SPECULAR_NO
   - _APPLY_TOON_NO
+  m_InvalidKeywords:
   - _ENABLE_DISTANCE_CORRECTION_YES
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -77,9 +77,16 @@ Material:
     - _APPLY_RIM: 1
     - _APPLY_SPECULAR: 1
     - _APPLY_TOON: 1
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
     - _Brightness: 5
     - _Bump_amount: 1
+    - _CastShadows: 1
     - _Contribution: 0
+    - _Cull: 2
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
     - _ENABLE_DISTANCE_CORRECTION: 0
     - _FadeDistance: 75
     - _OutlineThickness: 0.01
@@ -90,6 +97,12 @@ Material:
     - _Rim_glow: 10
     - _Rim_power: 5
     - _Shininess: 10
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
     - _Base_color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
     - _Offset: {r: 1, g: 1, b: 0, a: 0}

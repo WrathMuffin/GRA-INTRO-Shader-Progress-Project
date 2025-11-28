@@ -462,10 +462,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133258945}
-  - component: {fileID: 133258944}
   - component: {fileID: 133258943}
   - component: {fileID: 133258942}
-  - component: {fileID: 133258941}
   m_Layer: 0
   m_Name: SolarizeCamera
   m_TagString: MainCamera
@@ -473,23 +471,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &133258941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133258940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbbd1fefc81e54f919c8dd4044f727ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraPositioning
-  player: {fileID: 0}
-  speed: 1
-  min_position: {x: 0, y: 15, z: 0}
-  max_position: {x: 0, y: 15, z: 0}
-  inital_offset: {x: 0, y: 15, z: 0}
 --- !u!114 &133258942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,14 +566,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &133258944
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133258940}
-  m_Enabled: 1
 --- !u!4 &133258945
 Transform:
   m_ObjectHideFlags: 0
@@ -9549,7 +9522,7 @@ MonoBehaviour:
   music: {fileID: 0}
   end: {fileID: 0}
   death: {fileID: 0}
-  death_cam: {fileID: 0}
+  death_cam: {fileID: 133258940}
   bulletEffect: {fileID: 886685120136408709, guid: aa6fb72c74241c644aec67b11706e677, type: 3}
 --- !u!1 &2135128888
 GameObject:
@@ -9698,7 +9671,6 @@ GameObject:
   - component: {fileID: 2146620281}
   - component: {fileID: 2146620280}
   - component: {fileID: 2146620279}
-  - component: {fileID: 2146620278}
   m_Layer: 0
   m_Name: DeathCamera
   m_TagString: MainCamera
@@ -9706,23 +9678,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2146620278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146620277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbbd1fefc81e54f919c8dd4044f727ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraPositioning
-  player: {fileID: 0}
-  speed: 1
-  min_position: {x: 0, y: 15, z: 0}
-  max_position: {x: 0, y: 15, z: 0}
-  inital_offset: {x: 0, y: 15, z: 0}
 --- !u!114 &2146620279
 MonoBehaviour:
   m_ObjectHideFlags: 0
